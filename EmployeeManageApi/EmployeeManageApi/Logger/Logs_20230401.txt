@@ -1,0 +1,24 @@
+
+----------------------header--------------------------
+2023-04-01 11:26:29,497 [6] ERROR EmployeeManageApi.Common.LoggerHelper - Please set the ExcelPackage.LicenseContext property. See https://epplussoftware.com/developers/licenseexception
+OfficeOpenXml.LicenseException: Please set the ExcelPackage.LicenseContext property. See https://epplussoftware.com/developers/licenseexception
+   在 OfficeOpenXml.ExcelPackage.get_Workbook()
+   在 OfficeOpenXml.ExcelPackage.CreateBlankWb()
+   在 OfficeOpenXml.ExcelPackage.ConstructNewFile(String password)
+   在 OfficeOpenXml.ExcelPackage..ctor()
+   在 EmployeeManageApi.Common.ExcelHelper.GetExcel(DataTable dt, String sheetName, String region) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\ExcelHelper.cs:行号 14
+   在 EmployeeManageApi.BLL.EmployeeInfoMain_BLL.ExportExcel(ExcelParam param) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\EmployeeInfoMain_BLL.cs:行号 38
+   在 EmployeeManageApi.Controllers.EmployeeInfoMainController.ExportExcel(ExcelParam param) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\EmployeeInfoMainController.cs:行号 104
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-01 11:29:05,620 [6] ERROR EmployeeManageApi.Common.LoggerHelper - Please set the ExcelPackage.LicenseContext property. See https://epplussoftware.com/developers/licenseexception
+OfficeOpenXml.LicenseException: Please set the ExcelPackage.LicenseContext property. See https://epplussoftware.com/developers/licenseexception
+   在 OfficeOpenXml.ExcelPackage.get_Workbook()
+   在 OfficeOpenXml.ExcelPackage.CreateBlankWb()
+   在 OfficeOpenXml.ExcelPackage.ConstructNewFile(String password)
+   在 OfficeOpenXml.ExcelPackage..ctor()
+   在 EmployeeManageApi.Common.ExcelHelper.GetExcel(DataTable dt, String sheetName, String region)
+   在 EmployeeManageApi.BLL.EmployeeInfoMain_BLL.ExportExcel(ExcelParam param)
+   在 EmployeeManageApi.Controllers.EmployeeInfoMainController.ExportExcel(ExcelParam param)

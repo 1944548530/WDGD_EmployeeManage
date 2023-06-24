@@ -1,0 +1,36 @@
+
+----------------------header--------------------------
+2023-05-15 20:02:34,249 [22] ERROR EmployeeManageApi.Common.LoggerHelper - ExecuteNonQuery: CommandText 属性尚未初始化
+System.InvalidOperationException: ExecuteNonQuery: CommandText 属性尚未初始化
+   在 System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd)
+   在 EmployeeManageApi.DAL.Login_DAL.AccountDel(String loginName)
+   在 EmployeeManageApi.BLL.Login_BLL.AccountDel(String loginName)
+   在 EmployeeManageApi.Controllers.AuthController.AccountDel(String loginName)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-15 20:03:07,352 [22] ERROR EmployeeManageApi.Common.LoggerHelper - 找不到存储过程 'zhangjie'。
+System.Data.SqlClient.SqlException (0x80131904): 找不到存储过程 'zhangjie'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd)
+   在 EmployeeManageApi.DAL.Login_DAL.AccountDel(String loginName)
+   在 EmployeeManageApi.BLL.Login_BLL.AccountDel(String loginName)
+   在 EmployeeManageApi.Controllers.AuthController.AccountDel(String loginName)
+ClientConnectionId:b988134e-02d6-4ce5-9011-ae0b995d93c9
+Error Number:2812,State:62,Class:16

@@ -1,0 +1,43 @@
+
+----------------------header--------------------------
+2023-06-03 15:16:32,906 [55] ERROR EmployeeManageApi.Common.LoggerHelper - token
+System.ArgumentException: token
+   在 JWT.JwtParts..ctor(String token)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile() 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AuthController.cs:行号 87
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-06-03 15:17:22,513 [50] ERROR EmployeeManageApi.Common.LoggerHelper - token
+System.ArgumentException: token
+   在 JWT.JwtParts..ctor(String token)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile() 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AuthController.cs:行号 87
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-06-03 15:20:43,393 [55] ERROR EmployeeManageApi.Common.LoggerHelper - token
+System.ArgumentException: token
+   在 JWT.JwtParts..ctor(String token)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile() 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AuthController.cs:行号 87
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-06-03 15:24:14,795 [40] ERROR EmployeeManageApi.Common.LoggerHelper - token
+System.ArgumentException: token
+   在 JWT.JwtParts..ctor(String token)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile() 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AuthController.cs:行号 87
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-06-03 16:29:03,241 [47] ERROR EmployeeManageApi.Common.LoggerHelper - token
+System.ArgumentException: token
+   在 JWT.JwtParts..ctor(String token)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile() 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AuthController.cs:行号 87

@@ -1,0 +1,294 @@
+
+----------------------header--------------------------
+2023-04-09 16:12:29,693 [5] ERROR EmployeeManageApi.Common.LoggerHelper - String 引用没有设置为 String 的实例。
+参数名: s
+System.ArgumentNullException: String 引用没有设置为 String 的实例。
+参数名: s
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.DateTime.Parse(String s)
+   在 EmployeeManageApi.Common.Tool.getMonthid(String date) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\Tool.cs:行号 397
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 35
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:14:44,414 [5] ERROR EmployeeManageApi.Common.LoggerHelper - String 引用没有设置为 String 的实例。
+参数名: s
+System.ArgumentNullException: String 引用没有设置为 String 的实例。
+参数名: s
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.DateTime.Parse(String s)
+   在 EmployeeManageApi.Common.Tool.getMonthid(String date) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\Tool.cs:行号 397
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 35
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+
+----------------------header--------------------------
+2023-04-09 16:23:56,058 [6] ERROR EmployeeManageApi.Common.LoggerHelper - '2012043' 附近有语法错误。
+System.Data.SqlClient.SqlException (0x80131904): '2012043' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\QualityMain_DAL.cs:行号 26
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 41
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+ClientConnectionId:a5e05361-a342-4d95-a674-8fcf3e1f8770
+Error Number:102,State:1,Class:15
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:24:55,745 [6] ERROR EmployeeManageApi.Common.LoggerHelper - '2012043' 附近有语法错误。
+System.Data.SqlClient.SqlException (0x80131904): '2012043' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\QualityMain_DAL.cs:行号 26
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 41
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+ClientConnectionId:a5e05361-a342-4d95-a674-8fcf3e1f8770
+Error Number:102,State:1,Class:15
+
+----------------------header--------------------------
+2023-04-09 16:34:42,880 [7] ERROR EmployeeManageApi.Common.LoggerHelper - String 引用没有设置为 String 的实例。
+参数名: s
+System.ArgumentNullException: String 引用没有设置为 String 的实例。
+参数名: s
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.DateTime.Parse(String s)
+   在 EmployeeManageApi.Common.Tool.getMonthid(String date) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\Tool.cs:行号 397
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 35
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:34:52,427 [7] ERROR EmployeeManageApi.Common.LoggerHelper - String 引用没有设置为 String 的实例。
+参数名: s
+System.ArgumentNullException: String 引用没有设置为 String 的实例。
+参数名: s
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.DateTime.Parse(String s)
+   在 EmployeeManageApi.Common.Tool.getMonthid(String date) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\Tool.cs:行号 397
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 35
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:40:51,351 [15] ERROR EmployeeManageApi.Common.LoggerHelper - String 引用没有设置为 String 的实例。
+参数名: s
+System.ArgumentNullException: String 引用没有设置为 String 的实例。
+参数名: s
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.DateTime.Parse(String s)
+   在 EmployeeManageApi.Common.Tool.getMonthid(String date) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\Tool.cs:行号 397
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 35
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:43:25,927 [23] ERROR EmployeeManageApi.Common.LoggerHelper - 该字符串未被识别为有效的 DateTime。有一个未知单词(从索引 0 处开始)。
+System.FormatException: 该字符串未被识别为有效的 DateTime。有一个未知单词(从索引 0 处开始)。
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.DateTime.Parse(String s)
+   在 EmployeeManageApi.Common.Tool.getMonthid(String date) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\Tool.cs:行号 397
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 35
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:44:05,757 [10] ERROR EmployeeManageApi.Common.LoggerHelper - '2012043' 附近有语法错误。
+System.Data.SqlClient.SqlException (0x80131904): '2012043' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\QualityMain_DAL.cs:行号 26
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 41
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+ClientConnectionId:441a51f8-090a-46a2-a2ca-a5750aa3b5fa
+Error Number:102,State:1,Class:15
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:48:50,215 [10] ERROR EmployeeManageApi.Common.LoggerHelper - '2012043' 附近有语法错误。
+System.Data.SqlClient.SqlException (0x80131904): '2012043' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\QualityMain_DAL.cs:行号 26
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 41
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+ClientConnectionId:441a51f8-090a-46a2-a2ca-a5750aa3b5fa
+Error Number:102,State:1,Class:15
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:51:31,301 [10] ERROR EmployeeManageApi.Common.LoggerHelper - '2012043' 附近有语法错误。
+System.Data.SqlClient.SqlException (0x80131904): '2012043' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\QualityMain_DAL.cs:行号 26
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 41
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+ClientConnectionId:441a51f8-090a-46a2-a2ca-a5750aa3b5fa
+Error Number:102,State:1,Class:15
+
+----------------------header--------------------------
+2023-04-09 16:53:42,728 [7] ERROR EmployeeManageApi.Common.LoggerHelper - '2012043' 附近有语法错误。
+System.Data.SqlClient.SqlException (0x80131904): '2012043' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\QualityMain_DAL.cs:行号 26
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 41
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+ClientConnectionId:084d8776-e63f-4304-adee-bffddd0f06d5
+Error Number:102,State:1,Class:15
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:53:50,214 [7] ERROR EmployeeManageApi.Common.LoggerHelper - '2012043' 附近有语法错误。
+System.Data.SqlClient.SqlException (0x80131904): '2012043' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\QualityMain_DAL.cs:行号 26
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 41
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+ClientConnectionId:084d8776-e63f-4304-adee-bffddd0f06d5
+Error Number:102,State:1,Class:15
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 16:54:44,059 [6] ERROR EmployeeManageApi.Common.LoggerHelper - '2012043' 附近有语法错误。
+System.Data.SqlClient.SqlException (0x80131904): '2012043' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\QualityMain_DAL.cs:行号 26
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\QualityMain_BLL.cs:行号 41
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\QualityMainController.cs:行号 44
+ClientConnectionId:084d8776-e63f-4304-adee-bffddd0f06d5
+Error Number:102,State:1,Class:15
+
+----------------------header--------------------------
+2023-04-09 18:12:06,985 [44] ERROR EmployeeManageApi.Common.LoggerHelper - 将截断字符串或二进制数据。
+语句已终止。
+System.Data.SqlClient.SqlException (0x80131904): 将截断字符串或二进制数据。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd)
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo)
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo)
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo)
+ClientConnectionId:883e1353-ecee-476c-835b-5ff70c4eaab7
+Error Number:8152,State:14,Class:16
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-04-09 18:13:27,626 [38] ERROR EmployeeManageApi.Common.LoggerHelper - 将截断字符串或二进制数据。
+语句已终止。
+System.Data.SqlClient.SqlException (0x80131904): 将截断字符串或二进制数据。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd)
+   在 EmployeeManageApi.DAL.QualityMain_DAL.QualityInfoSave(QualityInfo qualityInfo)
+   在 EmployeeManageApi.BLL.QualityMain_BLL.QualityInfoSave(QualityInfo qualityInfo)
+   在 EmployeeManageApi.Controllers.QualityMainController.QualityInfoSave(QualityInfo qualityInfo)
+ClientConnectionId:883e1353-ecee-476c-835b-5ff70c4eaab7
+Error Number:8152,State:14,Class:16

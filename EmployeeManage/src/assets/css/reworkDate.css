@@ -1,0 +1,17 @@
+.reworkRateTd thead tr th{
+    background: #03a9f4;
+    border:1px solid #000000;
+    width:150px;
+}
+.reworkRateTd tbody tr td{
+    border:1px solid #000000;
+}
+.reworkRateTd {
+    border-collapse: collapse;
+}
+.el-row {
+    margin-bottom: 20px;
+}
+.el-input{
+    width:120px;
+}

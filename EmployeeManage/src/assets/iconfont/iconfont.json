@@ -1,0 +1,51 @@
+{
+  "id": "2912022",
+  "name": "S3kan'ban",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21177296",
+      "name": "模板维护",
+      "font_class": "mobanweihu",
+      "unicode": "e6d6",
+      "unicode_decimal": 59094
+    },
+    {
+      "icon_id": "11653569",
+      "name": "图表",
+      "font_class": "tubiao",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "18267956",
+      "name": "图表柱图",
+      "font_class": "tubiaozhutu",
+      "unicode": "e997",
+      "unicode_decimal": 59799
+    },
+    {
+      "icon_id": "12740716",
+      "name": "数据维护",
+      "font_class": "shujuweihu",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "1969476",
+      "name": "日报统计",
+      "font_class": "ribaotongji",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "12331685",
+      "name": "维护",
+      "font_class": "weihu",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    }
+  ]
+}

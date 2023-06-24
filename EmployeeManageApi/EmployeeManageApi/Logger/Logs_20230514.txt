@@ -1,0 +1,496 @@
+
+----------------------header--------------------------
+2023-05-14 08:55:54,071 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 对象名 'dncuser' 无效。
+System.Data.SqlClient.SqlException (0x80131904): 对象名 'dncuser' 无效。
+   在 EmployeeManageApi.Common.SqlHelper`1.sqlTable(String sqlStr)
+   在 EmployeeManageApi.DAL.Login_DAL.Login(String username, String password)
+   在 EmployeeManageApi.BLL.Login_BLL.Login(String username, String password)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+ClientConnectionId:015a30bc-c232-4776-81d2-7b9505b8f1a4
+Error Number:208,State:1,Class:16
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 08:58:27,891 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 值不能为 null。
+参数名: value
+System.ArgumentNullException: 值不能为 null。
+参数名: value
+   在 System.Security.Claims.Claim..ctor(String type, String value, String valueType, String issuer, String originalIssuer, ClaimsIdentity subject, String propertyKey, String propertyValue)
+   在 System.Security.Claims.Claim..ctor(String type, String value)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 08:59:33,437 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 值不能为 null。
+参数名: value
+System.ArgumentNullException: 值不能为 null。
+参数名: value
+   在 System.Security.Claims.Claim..ctor(String type, String value, String valueType, String issuer, String originalIssuer, ClaimsIdentity subject, String propertyKey, String propertyValue)
+   在 System.Security.Claims.Claim..ctor(String type, String value)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:07:06,916 [7] ERROR EmployeeManageApi.Common.LoggerHelper - IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '128' bits.
+参数名: keyBytes
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '128' bits.
+参数名: keyBytes
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   在 Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(String issuer, String audience, ClaimsIdentity subject, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt, SigningCredentials signingCredentials, EncryptingCredentials encryptingCredentials, IDictionary`2 claimCollection, String tokenType, IDictionary`2 additionalHeaderClaims, IDictionary`2 additionalInnerHeaderClaims)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   在 EmployeeManageApi.Common.JwtBearerAuthenticationExtension.GetJwtAccessToken(String secret, ClaimsIdentity claimsIdentity)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:07:35,493 [6] ERROR EmployeeManageApi.Common.LoggerHelper - IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '192' bits.
+参数名: keyBytes
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '192' bits.
+参数名: keyBytes
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   在 Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(String issuer, String audience, ClaimsIdentity subject, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt, SigningCredentials signingCredentials, EncryptingCredentials encryptingCredentials, IDictionary`2 claimCollection, String tokenType, IDictionary`2 additionalHeaderClaims, IDictionary`2 additionalInnerHeaderClaims)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   在 EmployeeManageApi.Common.JwtBearerAuthenticationExtension.GetJwtAccessToken(String secret, ClaimsIdentity claimsIdentity)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:13:18,308 [6] ERROR EmployeeManageApi.Common.LoggerHelper - Token must consist of 3 delimited by dot parts.
+参数名: token
+JWT.Exceptions.InvalidTokenPartsException: Token must consist of 3 delimited by dot parts.
+参数名: token
+   在 JWT.JwtParts..ctor(String token)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:14:56,070 [6] ERROR EmployeeManageApi.Common.LoggerHelper - Token must consist of 3 delimited by dot parts.
+参数名: token
+JWT.Exceptions.InvalidTokenPartsException: Token must consist of 3 delimited by dot parts.
+参数名: token
+   在 JWT.JwtParts..ctor(String token)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:15:45,683 [6] ERROR EmployeeManageApi.Common.LoggerHelper - Base-64 字符数组或字符串的长度无效。
+System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 JWT.JwtBase64UrlEncoder.Decode(String input)
+   在 JWT.JwtDecoder.DecodeHeader[T](JwtParts jwt)
+   在 JWT.JwtDecoder.Validate(JwtParts jwt, Byte[][] keys)
+   在 JWT.JwtDecoder.Decode(JwtParts jwt, Byte[][] keys, Boolean verify)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:21:46,904 [6] ERROR EmployeeManageApi.Common.LoggerHelper - Base-64 字符数组或字符串的长度无效。
+System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 JWT.JwtBase64UrlEncoder.Decode(String input)
+   在 JWT.JwtDecoder.DecodeHeader[T](JwtParts jwt)
+   在 JWT.JwtDecoder.Validate(JwtParts jwt, Byte[][] keys)
+   在 JWT.JwtDecoder.Decode(JwtParts jwt, Byte[][] keys, Boolean verify)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:22:00,251 [7] ERROR EmployeeManageApi.Common.LoggerHelper - IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   在 Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(String issuer, String audience, ClaimsIdentity subject, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt, SigningCredentials signingCredentials, EncryptingCredentials encryptingCredentials, IDictionary`2 claimCollection, String tokenType, IDictionary`2 additionalHeaderClaims, IDictionary`2 additionalInnerHeaderClaims)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   在 EmployeeManageApi.Common.JwtBearerAuthenticationExtension.GetJwtAccessToken(String secret, ClaimsIdentity claimsIdentity)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:22:06,392 [7] ERROR EmployeeManageApi.Common.LoggerHelper - IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   在 Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(String issuer, String audience, ClaimsIdentity subject, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt, SigningCredentials signingCredentials, EncryptingCredentials encryptingCredentials, IDictionary`2 claimCollection, String tokenType, IDictionary`2 additionalHeaderClaims, IDictionary`2 additionalInnerHeaderClaims)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   在 EmployeeManageApi.Common.JwtBearerAuthenticationExtension.GetJwtAccessToken(String secret, ClaimsIdentity claimsIdentity)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:22:13,451 [7] ERROR EmployeeManageApi.Common.LoggerHelper - IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   在 Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(String issuer, String audience, ClaimsIdentity subject, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt, SigningCredentials signingCredentials, EncryptingCredentials encryptingCredentials, IDictionary`2 claimCollection, String tokenType, IDictionary`2 additionalHeaderClaims, IDictionary`2 additionalInnerHeaderClaims)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   在 EmployeeManageApi.Common.JwtBearerAuthenticationExtension.GetJwtAccessToken(String secret, ClaimsIdentity claimsIdentity)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:22:32,835 [6] ERROR EmployeeManageApi.Common.LoggerHelper - IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   在 Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(String issuer, String audience, ClaimsIdentity subject, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt, SigningCredentials signingCredentials, EncryptingCredentials encryptingCredentials, IDictionary`2 claimCollection, String tokenType, IDictionary`2 additionalHeaderClaims, IDictionary`2 additionalInnerHeaderClaims)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   在 EmployeeManageApi.Common.JwtBearerAuthenticationExtension.GetJwtAccessToken(String secret, ClaimsIdentity claimsIdentity)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:23:12,334 [7] ERROR EmployeeManageApi.Common.LoggerHelper - IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256', the key size must be greater than: '256' bits, key has '208' bits.
+参数名: keyBytes
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   在 Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   在 Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   在 Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   在 Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(String issuer, String audience, ClaimsIdentity subject, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt, SigningCredentials signingCredentials, EncryptingCredentials encryptingCredentials, IDictionary`2 claimCollection, String tokenType, IDictionary`2 additionalHeaderClaims, IDictionary`2 additionalInnerHeaderClaims)
+   在 System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   在 EmployeeManageApi.Common.JwtBearerAuthenticationExtension.GetJwtAccessToken(String secret, ClaimsIdentity claimsIdentity)
+   在 EmployeeManageApi.Controllers.AuthController.Login(String username, String password)
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:30:24,224 [7] ERROR EmployeeManageApi.Common.LoggerHelper - Base-64 字符数组或字符串的长度无效。
+System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 JWT.JwtBase64UrlEncoder.Decode(String input)
+   在 JWT.JwtDecoder.DecodeHeader[T](JwtParts jwt)
+   在 JWT.JwtDecoder.Validate(JwtParts jwt, Byte[][] keys)
+   在 JWT.JwtDecoder.Decode(JwtParts jwt, Byte[][] keys, Boolean verify)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:30:29,928 [7] ERROR EmployeeManageApi.Common.LoggerHelper - Base-64 字符数组或字符串的长度无效。
+System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 JWT.JwtBase64UrlEncoder.Decode(String input)
+   在 JWT.JwtDecoder.DecodeHeader[T](JwtParts jwt)
+   在 JWT.JwtDecoder.Validate(JwtParts jwt, Byte[][] keys)
+   在 JWT.JwtDecoder.Decode(JwtParts jwt, Byte[][] keys, Boolean verify)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:31:26,185 [6] ERROR EmployeeManageApi.Common.LoggerHelper - Base-64 字符数组或字符串的长度无效。
+System.FormatException: Base-64 字符数组或字符串的长度无效。
+   在 System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   在 System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   在 System.Convert.FromBase64String(String s)
+   在 JWT.JwtBase64UrlEncoder.Decode(String input)
+   在 JWT.JwtDecoder.DecodeHeader[T](JwtParts jwt)
+   在 JWT.JwtDecoder.Validate(JwtParts jwt, Byte[][] keys)
+   在 JWT.JwtDecoder.Decode(JwtParts jwt, Byte[][] keys, Boolean verify)
+   在 JWT.JwtDecoderExtensions.Decode(IJwtDecoder decoder, String token, String key, Boolean verify)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:32:04,581 [6] ERROR EmployeeManageApi.Common.LoggerHelper - Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'System.Guid' because the type requires a JSON primitive value (e.g. string, number, boolean, null) to deserialize correctly.
+To fix this error either change the JSON to a JSON primitive value (e.g. string, number, boolean, null) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path 'guid', line 1, position 32.
+Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'System.Guid' because the type requires a JSON primitive value (e.g. string, number, boolean, null) to deserialize correctly.
+To fix this error either change the JSON to a JSON primitive value (e.g. string, number, boolean, null) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path 'guid', line 1, position 32.
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureArrayContract(JsonReader reader, Type objectType, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:34:20,270 [7] ERROR EmployeeManageApi.Common.LoggerHelper - Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'System.Guid' because the type requires a JSON primitive value (e.g. string, number, boolean, null) to deserialize correctly.
+To fix this error either change the JSON to a JSON primitive value (e.g. string, number, boolean, null) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path 'guid', line 1, position 32.
+Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'System.Guid' because the type requires a JSON primitive value (e.g. string, number, boolean, null) to deserialize correctly.
+To fix this error either change the JSON to a JSON primitive value (e.g. string, number, boolean, null) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path 'guid', line 1, position 32.
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureArrayContract(JsonReader reader, Type objectType, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 09:40:55,111 [6] ERROR EmployeeManageApi.Common.LoggerHelper - Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'System.Guid' because the type requires a JSON primitive value (e.g. string, number, boolean, null) to deserialize correctly.
+To fix this error either change the JSON to a JSON primitive value (e.g. string, number, boolean, null) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path 'guid', line 1, position 32.
+Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON array (e.g. [1,2,3]) into type 'System.Guid' because the type requires a JSON primitive value (e.g. string, number, boolean, null) to deserialize correctly.
+To fix this error either change the JSON to a JSON primitive value (e.g. string, number, boolean, null) or change the deserialized type to an array or a type that implements a collection interface (e.g. ICollection, IList) like List<T> that can be deserialized from a JSON array. JsonArrayAttribute can also be added to the type to force it to deserialize from a JSON array.
+Path 'guid', line 1, position 32.
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureArrayContract(JsonReader reader, Type objectType, JsonContract contract)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   在 EmployeeManageApi.Controllers.AuthController.Profile()
+
+----------------------header--------------------------
+2023-05-14 12:18:08,981 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 多次为 'a' 指定了列 'lmEmployeeId'。
+多次为 'b' 指定了列 'lmEmployeeId'。
+System.Data.SqlClient.SqlException (0x80131904): 多次为 'a' 指定了列 'lmEmployeeId'。
+多次为 'b' 指定了列 'lmEmployeeId'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.<QueryImpl>d__140`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Query(String sqlCmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 32
+   在 EmployeeManageApi.DAL.Attendance_DAL.GetAttendanceInfo(String date, String department, String shift, Int32 pageNum, Int32 pagesize) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\Attendance_DAL.cs:行号 73
+   在 EmployeeManageApi.BLL.Attendance_BLL.GetAttendanceInfo(String date, String department, String shift, Int32 pageNum, Int32 pagesize) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\Attendance_BLL.cs:行号 17
+   在 EmployeeManageApi.Controllers.AttendanceController.GetAttendanceInfo(String date, String department, String shift, Int32 pageNum, Int32 pagesize) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AttendanceController.cs:行号 25
+ClientConnectionId:d76f76a9-f521-40dd-a627-7642f8bd4e0d
+Error Number:8156,State:1,Class:16
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 12:18:51,407 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 多次为 'a' 指定了列 'lmEmployeeId'。
+多次为 'b' 指定了列 'lmEmployeeId'。
+System.Data.SqlClient.SqlException (0x80131904): 多次为 'a' 指定了列 'lmEmployeeId'。
+多次为 'b' 指定了列 'lmEmployeeId'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior)
+   在 Dapper.SqlMapper.<QueryImpl>d__140`1.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Query(String sqlCmd)
+   在 EmployeeManageApi.DAL.Attendance_DAL.GetAttendanceInfo(String date, String department, String shift, Int32 pageNum, Int32 pagesize)
+   在 EmployeeManageApi.BLL.Attendance_BLL.GetAttendanceInfo(String date, String department, String shift, Int32 pageNum, Int32 pagesize)
+   在 EmployeeManageApi.Controllers.AttendanceController.GetAttendanceInfo(String date, String department, String shift, Int32 pageNum, Int32 pagesize)
+ClientConnectionId:d76f76a9-f521-40dd-a627-7642f8bd4e0d
+Error Number:8156,State:1,Class:16
+
+----------------------header--------------------------
+2023-05-14 18:57:11,553 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 列名 'SuperAdministrator' 无效。
+列名 'Forbidden' 无效。
+列名 'Departmet' 无效。
+列名 'EmploreeId' 无效。
+System.Data.SqlClient.SqlException (0x80131904): 列名 'SuperAdministrator' 无效。
+列名 'Forbidden' 无效。
+列名 'Departmet' 无效。
+列名 'EmploreeId' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.Login_DAL.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\Login_DAL.cs:行号 69
+   在 EmployeeManageApi.BLL.Login_BLL.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\Login_BLL.cs:行号 31
+   在 EmployeeManageApi.Controllers.AuthController.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AuthController.cs:行号 147
+ClientConnectionId:81fca678-0f4c-479c-ae8b-77d43dbd14b6
+Error Number:207,State:1,Class:16
+
+----------------------header--------------------------
+2023-05-14 20:54:26,793 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 列名 'Departmet' 无效。
+列名 'EmploreeId' 无效。
+System.Data.SqlClient.SqlException (0x80131904): 列名 'Departmet' 无效。
+列名 'EmploreeId' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.Login_DAL.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\Login_DAL.cs:行号 69
+   在 EmployeeManageApi.BLL.Login_BLL.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\Login_BLL.cs:行号 31
+   在 EmployeeManageApi.Controllers.AuthController.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AuthController.cs:行号 147
+ClientConnectionId:a8fbde33-df09-4d44-8735-b1ebf5b5a98a
+Error Number:207,State:1,Class:16
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 20:55:40,076 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 列名 'Departmet' 无效。
+列名 'EmploreeId' 无效。
+System.Data.SqlClient.SqlException (0x80131904): 列名 'Departmet' 无效。
+列名 'EmploreeId' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.Login_DAL.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\Login_DAL.cs:行号 69
+   在 EmployeeManageApi.BLL.Login_BLL.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\Login_BLL.cs:行号 31
+   在 EmployeeManageApi.Controllers.AuthController.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AuthController.cs:行号 147
+ClientConnectionId:a8fbde33-df09-4d44-8735-b1ebf5b5a98a
+Error Number:207,State:1,Class:16
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-05-14 20:58:55,017 [14] ERROR EmployeeManageApi.Common.LoggerHelper - 列名 'Departmet' 无效。
+列名 'EmploreeId' 无效。
+System.Data.SqlClient.SqlException (0x80131904): 列名 'Departmet' 无效。
+列名 'EmploreeId' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Common\SqlHelper.cs:行号 21
+   在 EmployeeManageApi.DAL.Login_DAL.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\DAL\Login_DAL.cs:行号 69
+   在 EmployeeManageApi.BLL.Login_BLL.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\BLL\Login_BLL.cs:行号 31
+   在 EmployeeManageApi.Controllers.AuthController.Regist(User user) 位置 E:\文迪\车间管理\EmployeeManageApi\EmployeeManageApi\Controllers\AuthController.cs:行号 147
+ClientConnectionId:eeddead7-156f-4640-bcea-32e5fba68a73
+Error Number:207,State:1,Class:16
