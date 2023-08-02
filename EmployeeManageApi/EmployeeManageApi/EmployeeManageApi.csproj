@@ -238,6 +238,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Area\AreaAreaRegistration.cs" />
     <Compile Include="BLL\Attendance_BLL.cs" />
+    <Compile Include="BLL\DataChart_BLL.cs" />
     <Compile Include="BLL\EmployeeInfoMain_BLL.cs" />
     <Compile Include="BLL\Kanban_BLL.cs" />
     <Compile Include="BLL\Login_BLL.cs" />
@@ -248,11 +249,13 @@
     <Compile Include="Common\SqlHelper.cs" />
     <Compile Include="Common\Tool.cs" />
     <Compile Include="Controllers\AttendanceController.cs" />
+    <Compile Include="Controllers\DataChartController.cs" />
     <Compile Include="Controllers\EmployeeInfoMainController.cs" />
     <Compile Include="Controllers\KanbanController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\QualityMainController.cs" />
     <Compile Include="DAL\Attendance_DAL.cs" />
+    <Compile Include="DAL\DataChart_DAL.cs" />
     <Compile Include="DAL\EmployeeInfoMain_DAL.cs" />
     <Compile Include="DAL\Kanban_DAL.cs" />
     <Compile Include="DAL\Login_DAL.cs" />
@@ -303,6 +306,7 @@
     <Folder Include="fonts\" />
     <Folder Include="Scripts\" />
     <Folder Include="Views\Attendance\" />
+    <Folder Include="Views\DataChart\" />
     <Folder Include="Views\EmployeeInfoMain\" />
     <Folder Include="Views\Kanban\" />
     <Folder Include="Views\Login\" />
