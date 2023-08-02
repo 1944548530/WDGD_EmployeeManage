@@ -9,5 +9,7 @@ namespace EmployeeManageApi.Models
     {
         public string dept { get; set; }
         public string post { get; set; }
+        public string startTime { get; set; }
+        public string endTime { get; set; }
     }
 }

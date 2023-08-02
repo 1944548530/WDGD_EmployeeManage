@@ -8,6 +8,7 @@ using JWT.Serializers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -19,6 +20,7 @@ namespace EmployeeManageApi.Controllers
         private readonly string secret = "0123456789ABCDEFGHIJKLMNOPRSTUVWXYZ";
         Attendance_BLL bll = new Attendance_BLL();
         Tool tool = new Tool();
+        [HttpGet]
         public JsonResult GetOvertTimeInfo(string date, string department, string shift, int overTimePage, int overTimePageNum) {
             var response = new Response();
             try
@@ -37,6 +39,7 @@ namespace EmployeeManageApi.Controllers
                 return Json(response, JsonRequestBehavior.AllowGet);
             }
         }
+        [HttpGet]
         public JsonResult GetAttendanceInfo(string date, string department, string shift, int pageNum, int pagesize) {
             var response = new Response();
             try
@@ -57,6 +60,7 @@ namespace EmployeeManageApi.Controllers
             }
         }
 
+        [HttpPost]
         public JsonResult SaveOverTimeRow(AttendanceModel attendModel) {
             string authHeader = this.Request.Headers["Authorization"];//Header中的token
             User user = tool.GetAuthUser(authHeader);
@@ -83,7 +87,7 @@ namespace EmployeeManageApi.Controllers
                 return Json(response, JsonRequestBehavior.AllowGet);
             }
         }
-
+        [HttpPost]
         public JsonResult SaveAttendanceRow(AttendanceModel attendModel) {
             string authHeader = this.Request.Headers["Authorization"];//Header中的token
             //IJwtAlgorithm algorithm = new HMACSHA256Algorithm();
@@ -115,7 +119,7 @@ namespace EmployeeManageApi.Controllers
                 return Json(response, JsonRequestBehavior.AllowGet);
             }
         }
-
+        [HttpGet]
         public ActionResult ExportAttendanceInfo(string date, string department, string shift) {
             try
             {
@@ -128,7 +132,20 @@ namespace EmployeeManageApi.Controllers
                 return File(new byte[10], "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
             }
         }
-
-        
+        [HttpGet]
+        public JsonResult GetWorkTimeInfo()
+        {
+            var response = new Response();
+            try
+            {
+                var data = bll.GetWorkTimeInfo();
+                response.SetData(data);
+                return Json(response, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex) {
+                response.SetFailed("");
+                return Json(response, JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }

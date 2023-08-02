@@ -66,5 +66,9 @@ namespace EmployeeManageApi.BLL
             byte[] arr = ExcelHelper.GetExcel(dt, "品质信息", "A1:M1");
             return arr;
         }
+
+        public IEnumerable<Attendance> GetWorkTimeInfo() {
+            return dal.GetWorkTimeInfo();
+        }
     }
 }

@@ -60,8 +60,8 @@ namespace EmployeeManageApi.BLL
             return ExcelHelper.GetExcel(dt, "员工信息", "A1:H1");
         }
 
-        public int deptInfoSave(string dept) {
-            return dal.deptInfoSave(dept);
+        public int deptInfoSave(string dept, string startTime, string endTime) {
+            return dal.deptInfoSave(dept, startTime, endTime);
         }
 
         public int PostInfoSave(string post) {

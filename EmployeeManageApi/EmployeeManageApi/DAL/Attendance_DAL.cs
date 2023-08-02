@@ -26,8 +26,12 @@ namespace EmployeeManageApi.DAL
 
             StringBuilder sb2 = new StringBuilder();
             sb2.Append($@"select ebi.employeeId, ebi.cname, ebi.department, 
-                           att.lmstate,att.date,att.lmName, att.lmEmployeeId,att.overLmEmployeeId, att.overLmName,
-		                   att.overStartTime, att.overEndTime overTime, att.overTimeHour, att.overTips from (select * from [dbo].[EP_EmployeeBaseInfo] where isValid = 'Y' and shift = '{shift}') ebi
+                           att.lmstate,att.date,att.lmName, att.lmEmployeeId,att.overLmEmployeeId, att.overLmName, att.overLmState,
+		                   --case when isnull(att.overStartTime, '') = ''
+						   --then (select param3 endTime from [dbo].[systemBase] where module = '车间管理' and functionName = '车间维护' and isValid = 'Y' and param1 = ebi.department) 
+						   --else att.overStartTime end as overStartTime,
+                            overStartTime,
+                           att.overEndTime overTime, att.overTimeHour, att.overTimeHour2, att.overTimeHour3, att.overTips from (select * from [dbo].[EP_EmployeeBaseInfo] where isValid = 'Y' and shift = '{shift}') ebi
                               left join 
                               (
 	                             {sb1.ToString()}   
@@ -38,7 +42,7 @@ namespace EmployeeManageApi.DAL
                 sb2.Append($@" and ebi.department = '{department}'");
             }
             StringBuilder sb3 = new StringBuilder();
-            //sb3.Append($@"select * from
+            //sb3.Append($@"select * fromdsa 
             //              (
             //                select ROW_NUMBER() over (order by lmstate desc )num, * from
             //                (
@@ -52,7 +56,28 @@ namespace EmployeeManageApi.DAL
                                 {sb2.ToString()}
                             )a
                           )b where b.num between '{indexBegin}' and '{indexEnd}' ");
-            return SqlHelper<Attendance>.Query(sb3.ToString());
+            var list = SqlHelper<Attendance>.Query(sb3.ToString());
+            var list2 = SqlHelper<deptModel>.Query("select param1 dept ,param3 endTime from [dbo].[systemBase] where module = '车间管理' and functionName = '车间维护' and isValid = 'Y'");
+            foreach (var item in list) {
+                if (string.IsNullOrWhiteSpace(item.date)) {
+                    item.date = date;
+                    int weekDay = (int)DateTime.Parse(item.date).DayOfWeek;
+                    var li = list2.Where(v => v.dept == item.department);
+                    if (li.Count() > 0)
+                    {
+                        if (!(weekDay == 6 || weekDay == 0))
+                        {
+                            if (string.IsNullOrWhiteSpace(item.overStartTime))
+                            {
+                                item.overStartTime = li.ElementAt(0).endTime;
+                            }
+                        }
+                    }
+                }
+                
+                
+            }
+            return list;
         }
         public IEnumerable<Attendance> GetAttendanceInfo(string date, string department, string shift, int pageNum, int pagesize)
         {
@@ -158,11 +183,12 @@ namespace EmployeeManageApi.DAL
         public int SaveOverTimeRow(AttendanceModel attendModel) {
             string sqlCmd = $@"insert into EP_AttendanceInfo
                                 (date, shift, dept, employeeId, cname, 
-                                overStartTime, overEndTime, overTimeHour, overTips, overLmEmployeeId, overLmName, lmstate, lmdate, lmtime, isValid)
+                                overStartTime, overEndTime, overTimeHour, overTips, overLmEmployeeId, overLmName, lmstate, lmdate, lmtime, isValid, overTimeHour2, overTimeHour3, overLmState)
                                 values
                                 ('" + attendModel.date + @"', '" + attendModel.shift + @"', '" + attendModel.department + @"', '" + attendModel.employeeId + @"',
                                 '" + attendModel.cname + @"', '" + attendModel.overStartTime + @"', '" + attendModel.overEndTime + @"', '" + attendModel.overTimeHour + @"',
-                                '" + attendModel.overTips + @"', '" + attendModel.overLmEmployeeId + @"', '" + attendModel.overLmName + @"', 'Y', '" + attendModel.lmdate + @"', '" + attendModel.lmtime + @"', 'Y')";
+                                '" + attendModel.overTips + @"', '" + attendModel.overLmEmployeeId + @"', '" + attendModel.overLmName + @"', 'Y', '" + attendModel.lmdate + @"', 
+                                '" + attendModel.lmtime + @"', 'Y', '" + attendModel.overTimeHour2 + @"', '" + attendModel.overTimeHour3 + @"', 'Y')";
             return SqlHelper<Attendance>.Execute(sqlCmd);
         }
         public int SaveAttendanceRow(AttendanceModel attendModel) {
@@ -186,8 +212,8 @@ namespace EmployeeManageApi.DAL
         public int UpOverTimeRow(AttendanceModel attendModel) {
             string sqlCmd = $@"update EP_AttendanceInfo
                                set  overStartTime = '" + attendModel.overStartTime + @"', overEndTime = '" + attendModel.overEndTime + @"', overTimeHour = '" + attendModel.overTimeHour + @"', overTips = '" + attendModel.overTips + @"', 
-                               overLmEmployeeId = '" + attendModel.overLmEmployeeId + @"', overLmName = '" + attendModel.overLmName + @"'
-                               where [date] = '" + attendModel.date + @"' and employeeId = '" + attendModel.employeeId + @"' and lmstate = 'Y'";
+                               overLmEmployeeId = '" + attendModel.overLmEmployeeId + @"', overLmName = '" + attendModel.overLmName + @"', overTimeHour2 = '" + attendModel.overTimeHour2 + @"', overTimeHour3 = '" + attendModel.overTimeHour3 + @"', overLmstate = 'Y'
+                               where [date] = '" + attendModel.date + @"' and employeeId = '" + attendModel.employeeId + @"' ";
             return SqlHelper<Attendance>.Execute(sqlCmd);
         }
 
@@ -239,6 +265,12 @@ namespace EmployeeManageApi.DAL
                                  ) att on ebi.employeeId = att.employeeId
                                   where  1=1 order by lmstate desc ";
             return SqlHelper<Attendance>.sqlTable(sqlCmd);
+        }
+
+        public IEnumerable<Attendance> GetWorkTimeInfo() {
+            string sqlCmd = @"select param1 department, param3 overEndTime from [dbo].[systemBase]
+                                where module = '车间管理' and functionName = '车间维护' and isValid = 'Y'";
+            return SqlHelper<Attendance>.Query(sqlCmd);
         }
     }
 }

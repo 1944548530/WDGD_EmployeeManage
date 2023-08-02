@@ -114,11 +114,11 @@ namespace EmployeeManageApi.Controllers
         }
 
         [HttpGet]
-        public JsonResult deptInfoSave(string dept) {
+        public JsonResult deptInfoSave(string dept, string startTime, string endTime) {
             var response = new Response();
             try
             {
-                int result = bll.deptInfoSave(dept);
+                int result = bll.deptInfoSave(dept, startTime, endTime);
                 if (result == 0)
                 {
                     response.SetFailed("保存失败");

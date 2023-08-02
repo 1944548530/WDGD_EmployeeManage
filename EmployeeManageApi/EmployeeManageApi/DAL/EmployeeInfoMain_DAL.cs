@@ -45,7 +45,7 @@ namespace EmployeeManageApi.DAL
         public IEnumerable<deptModel> GetDeptList(int deptPageNum, int deptPagesize) {
             int indexBegin = (deptPageNum - 1) * deptPagesize + 1;
             int indexEnd = deptPageNum * deptPagesize;
-            string sqlCmd = @"select b.param1 dept from 
+            string sqlCmd = @"select b.param1 dept, b.param2 startTime, b.param3 endTime from 
                               (
                                 select ROW_NUMBER() over(order by lmdate desc, lmtime desc)num, * from
                                 (
@@ -103,12 +103,12 @@ namespace EmployeeManageApi.DAL
             return SqlHelper<EmployeeInfo>.sqlTable(sqlCmd);
         }
 
-        public int deptInfoSave(string dept) {
+        public int deptInfoSave(string dept, string startTime, string endTime) {
             string lmdate = DateTime.Now.ToString("yyyy-MM-dd");
             string lmtime = DateTime.Now.ToString("HH:mm:ss");
-            string sqlCmd = @"insert into systemBase(module, functionName, param1, isValid, lmuser, lmdate, lmtime)
+            string sqlCmd = @"insert into systemBase(module, functionName, param1, param2, param3, isValid, lmuser, lmdate, lmtime)
                               values
-                              ('车间管理', '车间维护', '" + dept + @"', 'Y', 'system', '" + lmdate + @"', '" + lmtime + @"')";
+                              ('车间管理', '车间维护', '" + dept + @"', '" + startTime + @"', '" + endTime + @"', 'Y', 'system', '" + lmdate + @"', '" + lmtime + @"')";
             return SqlHelper<deptModel>.Execute(sqlCmd);
         }
 

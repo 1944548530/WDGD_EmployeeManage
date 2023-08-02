@@ -18,6 +18,8 @@ namespace EmployeeManageApi.Models
         public string overStartTime { get; set; }
         public string overEndTime { get; set; }
         public string overTimeHour { get; set; }
+        public string overTimeHour2 { get; set; }
+        public string overTimeHour3 { get; set; }
         public string tips { get; set; }
         public string overTips { get; set; }
         public string department { get; set; }

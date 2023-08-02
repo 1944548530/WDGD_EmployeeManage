@@ -20,6 +20,8 @@ namespace EmployeeManageApi.Models
         public string overEndTime { get; set; }
         public string overTime { get; set; }
         public string overTimeHour { get; set; }
+        public string overTimeHour2 { get;set; }
+        public string overTimeHour3 { get; set; }
         public string lmName { get; set; }
         public string lmEmployeeId { get; set; }
         public string overLmEmployeeId { get; set; }
@@ -27,5 +29,6 @@ namespace EmployeeManageApi.Models
         public string lmstate { get; set; }
         public string tips { get; set; }
         public string overTips { get; set; }
+        public string overLmState { get; set; }
     }
 }
