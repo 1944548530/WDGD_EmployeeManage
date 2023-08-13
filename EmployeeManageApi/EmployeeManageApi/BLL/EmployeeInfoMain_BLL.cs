@@ -93,5 +93,7 @@ namespace EmployeeManageApi.BLL
             EmployeeInfo employeeInfo = new EmployeeInfo();
             return dal.GetInfoByID(employeeId);
         }
+
+        
     }
 }

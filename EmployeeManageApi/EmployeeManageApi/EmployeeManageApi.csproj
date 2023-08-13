@@ -240,6 +240,7 @@
     <Compile Include="BLL\Attendance_BLL.cs" />
     <Compile Include="BLL\DataChart_BLL.cs" />
     <Compile Include="BLL\EmployeeInfoMain_BLL.cs" />
+    <Compile Include="BLL\Equipment_BLL.cs" />
     <Compile Include="BLL\Kanban_BLL.cs" />
     <Compile Include="BLL\Login_BLL.cs" />
     <Compile Include="BLL\QualityMain_BLL.cs" />
@@ -251,12 +252,14 @@
     <Compile Include="Controllers\AttendanceController.cs" />
     <Compile Include="Controllers\DataChartController.cs" />
     <Compile Include="Controllers\EmployeeInfoMainController.cs" />
+    <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\KanbanController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\QualityMainController.cs" />
     <Compile Include="DAL\Attendance_DAL.cs" />
     <Compile Include="DAL\DataChart_DAL.cs" />
     <Compile Include="DAL\EmployeeInfoMain_DAL.cs" />
+    <Compile Include="DAL\Equipment_DAL.cs" />
     <Compile Include="DAL\Kanban_DAL.cs" />
     <Compile Include="DAL\Login_DAL.cs" />
     <Compile Include="DAL\QualityMain_DAL.cs" />
@@ -268,6 +271,8 @@
     <Compile Include="Models\AttendanceModel.cs" />
     <Compile Include="Models\deptModel.cs" />
     <Compile Include="Models\EmployeeInfo.cs" />
+    <Compile Include="Models\EquipmentModel.cs" />
+    <Compile Include="Models\EquipmentUseModel.cs" />
     <Compile Include="Models\ExcelParam.cs" />
     <Compile Include="Models\KanbanInfo.cs" />
     <Compile Include="Models\KanbanPerByPost.cs" />
@@ -308,6 +313,7 @@
     <Folder Include="Views\Attendance\" />
     <Folder Include="Views\DataChart\" />
     <Folder Include="Views\EmployeeInfoMain\" />
+    <Folder Include="Views\Equipment\" />
     <Folder Include="Views\Kanban\" />
     <Folder Include="Views\Login\" />
     <Folder Include="Views\QualityMain\" />

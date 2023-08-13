@@ -1,0 +1,26 @@
+
+----------------------header--------------------------
+2023-08-12 09:50:24,254 [8] ERROR EmployeeManageApi.Common.LoggerHelper - 列名 'equipmenName' 无效。
+System.Data.SqlClient.SqlException (0x80131904): 列名 'equipmenName' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader)
+   在 Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command)
+   在 Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   在 EmployeeManageApi.Common.SqlHelper`1.Execute(String sqlSmd)
+   在 EmployeeManageApi.DAL.Equipment_DAL.UpdateOverRow(EquipmentUseModel info)
+   在 EmployeeManageApi.BLL.Equipment_BLL.UpdateOverRow(EquipmentUseModel info)
+   在 EmployeeManageApi.Controllers.EquipmentController.SaveOverRow(EquipmentUseModel info)
+ClientConnectionId:fade52a5-a395-4145-81d1-a392461efdb9
+Error Number:207,State:1,Class:16
+
+----------------------header--------------------------
+2023-08-12 16:49:24,789 [11] ERROR EmployeeManageApi.Common.LoggerHelper - 未将对象引用设置到对象的实例。
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 EmployeeManageApi.BLL.Equipment_BLL.GetEquipUseInfo()
+   在 EmployeeManageApi.Controllers.EquipmentController.GetEquipUseInfo()
