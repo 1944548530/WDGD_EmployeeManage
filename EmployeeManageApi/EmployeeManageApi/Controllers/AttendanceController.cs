@@ -132,6 +132,22 @@ namespace EmployeeManageApi.Controllers
                 return File(new byte[10], "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
             }
         }
+
+        [HttpGet]
+        public ActionResult ExportOvertimeInfo(string date, string dateEnd, string department, string shift)
+        {
+            try
+            {
+                byte[] arr = bll.ExportOvertimeInfo(date, dateEnd, department, shift);
+                return File(arr, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+            }
+            catch (Exception ex)
+            {
+                LoggerHelper.WriteLog(ex);
+                return File(new byte[10], "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+            }
+        }
+
         [HttpGet]
         public JsonResult GetWorkTimeInfo()
         {

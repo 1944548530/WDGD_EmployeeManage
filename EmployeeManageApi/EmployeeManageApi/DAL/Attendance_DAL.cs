@@ -267,6 +267,30 @@ namespace EmployeeManageApi.DAL
             return SqlHelper<Attendance>.sqlTable(sqlCmd);
         }
 
+        public DataTable ExportOvertimeInfo(string date, string dateEnd, string department, string shift)
+        {
+
+            string deptApp = tool.sqlAppend2("department", department);
+            string sqlCmd = $@"select date as '日期',employeeId as '工号', cname as '姓名', department as '车间', 
+                                overStartTime as '加班开始时间', overEndTime as '加班结束时间', overTimeHour as '加班工时（1倍）', overTimeHour2 as '加班工时（2倍）',
+                                overTimeHour3 as '加班工时（3倍）', overLmEmployeeId as '维护人工号', overLmName as '维护人姓名',overTips as '备注'
+                                from
+                                (
+	                                select ebi.employeeId, ebi.cname, ebi.department, 
+	                                att.date, overLmEmployeeId, att.overLmName, 
+	                                overStartTime,att.overEndTime, 
+	                                att.overTimeHour, att.overTimeHour2, att.overTimeHour3,
+	                                att.overTips, att.overLmState 
+	                                from (select * from [dbo].[EP_EmployeeBaseInfo] where isValid = 'Y' and shift = 'D') ebi
+	                                left join 
+	                                (
+	                                    select * from [dbo].[EP_AttendanceInfo] att where 1=1  and [date] between '{date}' and '{dateEnd}' and shift = '{shift}'  
+	                                ) att on ebi.employeeId = att.employeeId and ebi.isValid = 'Y' 
+	                                where  1=1 
+                                )a where overLmState = 'Y' {deptApp}";
+            return SqlHelper<Attendance>.sqlTable(sqlCmd);
+        }
+
         public IEnumerable<Attendance> GetWorkTimeInfo() {
             string sqlCmd = @"select param1 department, param3 overEndTime from [dbo].[systemBase]
                                 where module = '车间管理' and functionName = '车间维护' and isValid = 'Y'";

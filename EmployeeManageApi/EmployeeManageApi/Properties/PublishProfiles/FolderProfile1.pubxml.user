@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>E:\EmployeeManage</_PublishTargetUrl>
-    <History>True|2023-07-27T11:52:29.2513228Z;</History>
+    <History>True|2023-08-16T11:43:41.9481883Z;True|2023-07-27T19:52:29.2513228+08:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/Area/Views/web.config">
@@ -21,10 +21,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/03/2021 22:07:30</publishTime>
     </File>
     <File Include="bin/EmployeeManageApi.dll">
-      <publishTime>07/27/2023 19:52:27</publishTime>
+      <publishTime>08/21/2023 22:15:36</publishTime>
     </File>
     <File Include="bin/EmployeeManageApi.pdb">
-      <publishTime>07/27/2023 19:52:27</publishTime>
+      <publishTime>08/21/2023 22:15:36</publishTime>
     </File>
     <File Include="bin/EPPlus.dll">
       <publishTime>03/24/2023 18:04:36</publishTime>
@@ -297,7 +297,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/24/2023 19:33:14</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/27/2023 19:52:28</publishTime>
+      <publishTime>08/16/2023 19:43:41</publishTime>
     </File>
   </ItemGroup>
 </Project>

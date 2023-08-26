@@ -67,6 +67,13 @@ namespace EmployeeManageApi.BLL
             return arr;
         }
 
+        public byte[] ExportOvertimeInfo(string date, string dateEnd, string department, string shift)
+        {
+            DataTable dt = dal.ExportOvertimeInfo(date, dateEnd, department, shift);
+            byte[] arr = ExcelHelper.GetExcel(dt, "加班信息", "A1:L1");
+            return arr;
+        }
+
         public IEnumerable<Attendance> GetWorkTimeInfo() {
             return dal.GetWorkTimeInfo();
         }

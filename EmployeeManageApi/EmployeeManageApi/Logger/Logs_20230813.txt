@@ -1,0 +1,31 @@
+
+----------------------header--------------------------
+2023-08-13 16:45:14,425 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 名为“col7”的列已属于此 DataTable。
+System.Data.DuplicateNameException: 名为“col7”的列已属于此 DataTable。
+   在 System.Data.DataColumnCollection.RegisterColumnName(String name, DataColumn column)
+   在 System.Data.DataColumnCollection.BaseAdd(DataColumn column)
+   在 System.Data.DataColumnCollection.AddAt(Int32 index, DataColumn column)
+   在 System.Data.DataColumnCollection.Add(DataColumn column)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-08-13 16:46:00,858 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 名为“col7”的列已属于此 DataTable。
+System.Data.DuplicateNameException: 名为“col7”的列已属于此 DataTable。
+   在 System.Data.DataColumnCollection.RegisterColumnName(String name, DataColumn column)
+   在 System.Data.DataColumnCollection.BaseAdd(DataColumn column)
+   在 System.Data.DataColumnCollection.AddAt(Int32 index, DataColumn column)
+   在 System.Data.DataColumnCollection.Add(DataColumn column)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-08-13 16:46:54,627 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 名为“col7”的列已属于此 DataTable。
+System.Data.DuplicateNameException: 名为“col7”的列已属于此 DataTable。
+   在 System.Data.DataColumnCollection.RegisterColumnName(String name, DataColumn column)
+   在 System.Data.DataColumnCollection.BaseAdd(DataColumn column)
+   在 System.Data.DataColumnCollection.AddAt(Int32 index, DataColumn column)
+   在 System.Data.DataColumnCollection.Add(DataColumn column)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()

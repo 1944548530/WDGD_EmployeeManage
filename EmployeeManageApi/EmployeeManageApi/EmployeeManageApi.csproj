@@ -243,6 +243,7 @@
     <Compile Include="BLL\Equipment_BLL.cs" />
     <Compile Include="BLL\Kanban_BLL.cs" />
     <Compile Include="BLL\Login_BLL.cs" />
+    <Compile Include="BLL\ProductionPlan_BLL.cs" />
     <Compile Include="BLL\QualityMain_BLL.cs" />
     <Compile Include="Common\ExcelHelper.cs" />
     <Compile Include="Common\JwtBearerAuthenticationExtension.cs" />
@@ -255,6 +256,7 @@
     <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\KanbanController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ProductionPlanController.cs" />
     <Compile Include="Controllers\QualityMainController.cs" />
     <Compile Include="DAL\Attendance_DAL.cs" />
     <Compile Include="DAL\DataChart_DAL.cs" />
@@ -262,6 +264,7 @@
     <Compile Include="DAL\Equipment_DAL.cs" />
     <Compile Include="DAL\Kanban_DAL.cs" />
     <Compile Include="DAL\Login_DAL.cs" />
+    <Compile Include="DAL\ProductionPlan_DAL.cs" />
     <Compile Include="DAL\QualityMain_DAL.cs" />
     <Compile Include="Enum\CommonEnum.cs" />
     <Compile Include="Global.asax.cs">
@@ -316,6 +319,7 @@
     <Folder Include="Views\Equipment\" />
     <Folder Include="Views\Kanban\" />
     <Folder Include="Views\Login\" />
+    <Folder Include="Views\ProductionPlan\" />
     <Folder Include="Views\QualityMain\" />
   </ItemGroup>
   <ItemGroup>
