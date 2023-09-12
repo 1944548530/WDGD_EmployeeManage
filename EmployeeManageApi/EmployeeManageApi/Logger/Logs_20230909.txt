@@ -1,0 +1,31 @@
+
+----------------------header--------------------------
+2023-09-09 09:38:57,372 [34] ERROR EmployeeManageApi.Common.LoggerHelper - 列“date”不属于表 。
+System.ArgumentException: 列“date”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 EmployeeManageApi.DAL.ProductionPlan_DAL.ProductionImport(DataTable dt)
+   在 EmployeeManageApi.BLL.ProductionPlan_BLL.ProductionImport(DataTable dt)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-09 09:40:02,116 [39] ERROR EmployeeManageApi.Common.LoggerHelper - 列“date”不属于表 。
+System.ArgumentException: 列“date”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 EmployeeManageApi.DAL.ProductionPlan_DAL.ProductionImport(DataTable dt)
+   在 EmployeeManageApi.BLL.ProductionPlan_BLL.ProductionImport(DataTable dt)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-09 09:40:40,449 [34] ERROR EmployeeManageApi.Common.LoggerHelper - 列“date”不属于表 。
+System.ArgumentException: 列“date”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 EmployeeManageApi.DAL.ProductionPlan_DAL.ProductionImport(DataTable dt)
+   在 EmployeeManageApi.BLL.ProductionPlan_BLL.ProductionImport(DataTable dt)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()

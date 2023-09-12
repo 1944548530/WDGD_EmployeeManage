@@ -29,6 +29,10 @@
                 <el-radio v-model="queryParam.shift" label="D">白班</el-radio>
                 <el-radio v-model="queryParam.shift" label="N">晚班</el-radio>&emsp;
                 <el-button type="primary" @click="SearchBtn" size="medium" icon="el-icon-search">查询</el-button>&emsp;
+                
+                <!-- <a href="../../DATAVIS/index.html" target="_blank">打开更多看板→</a> -->
+                <el-button type="primary" @click="goToDynamicPage()">打开更多看板→</el-button>
+                <!-- <a href="http://localhost:81/" style="text-decoration:none;" target="_blank">打开更多看板→</a> -->
                 <!-- <el-button type="primary" @click="exportExcel" size="medium" icon="el-icon-download">导出</el-button> -->
             </div>
             <div style="width:100%;margin-top:70px;margin-bottom:10px;font-size:15px;">
@@ -153,6 +157,9 @@
             this.GetKanbanInfo()
         },
         methods:{
+            goToDynamicPage(){
+                window.open("http://192.168.1.195/DATAVIS/")
+            },
             clickName: function(name, post){
                 this.DialogVisible = true
                 this.$http.get('Kanban/GetEmployeeInfo',{

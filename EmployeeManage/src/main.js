@@ -36,7 +36,7 @@ Vue.prototype.$moment = moment;
 //Vue.use(Message);
 Vue.prototype.$message = Message;
 Vue.prototype.$qs = qs;
-axios.defaults.baseURL = "http://localhost:56238"
+axios.defaults.baseURL = "http://192.168.1.195/EmployeeManage"
 
 //localhost:56238
 //10.85.17.233/MIAOIClient

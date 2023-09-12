@@ -1,0 +1,216 @@
+
+----------------------header--------------------------
+2023-09-03 09:02:46,688 [5] ERROR EmployeeManageApi.Common.LoggerHelper - 指定的转换无效。
+System.InvalidCastException: 指定的转换无效。
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:04:31,119 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 指定的转换无效。
+System.InvalidCastException: 指定的转换无效。
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------header--------------------------
+2023-09-03 09:09:20,939 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 不能将 Column“wuLiaoDaoDaHour”设置为 null。请改用 DBNull。
+System.ArgumentException: 不能将 Column“wuLiaoDaoDaHour”设置为 null。请改用 DBNull。
+   在 System.Data.DataRow.set_Item(DataColumn column, Object value)
+   在 System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 56
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:12:48,012 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 不能将 Column“wuLiaoDaoDaHour”设置为 null。请改用 DBNull。
+System.ArgumentException: 不能将 Column“wuLiaoDaoDaHour”设置为 null。请改用 DBNull。
+   在 System.Data.DataRow.set_Item(DataColumn column, Object value)
+   在 System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 56
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:15:43,570 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 不能将 Column“wuLiaoDaoDaHour”设置为 null。请改用 DBNull。
+System.ArgumentException: 不能将 Column“wuLiaoDaoDaHour”设置为 null。请改用 DBNull。
+   在 System.Data.DataRow.set_Item(DataColumn column, Object value)
+   在 System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:23:18,427 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。不能在 wuLiaoDaoDaHour 列中存储 <>。所需类型是 Double。
+System.ArgumentException: 输入字符串的格式不正确。不能在 wuLiaoDaoDaHour 列中存储 <>。所需类型是 Double。 ---> System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   在 System.Data.Common.DoubleStorage.Set(Int32 record, Object value)
+   在 System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.DataColumn.set_Item(Int32 record, Object value)
+   在 System.Data.DataRow.set_Item(DataColumn column, Object value)
+   在 System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:26:04,301 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。不能在 wuLiaoDaoDaHour 列中存储 <>。所需类型是 Double。
+System.ArgumentException: 输入字符串的格式不正确。不能在 wuLiaoDaoDaHour 列中存储 <>。所需类型是 Double。 ---> System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   在 System.Data.Common.DoubleStorage.Set(Int32 record, Object value)
+   在 System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.DataColumn.set_Item(Int32 record, Object value)
+   在 System.Data.DataRow.set_Item(DataColumn column, Object value)
+   在 System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:30:17,825 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。不能在 wuLiaoDaoDaHour 列中存储 <>。所需类型是 Double。
+System.ArgumentException: 输入字符串的格式不正确。不能在 wuLiaoDaoDaHour 列中存储 <>。所需类型是 Double。 ---> System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.String.System.IConvertible.ToDouble(IFormatProvider provider)
+   在 System.Data.Common.DoubleStorage.Set(Int32 record, Object value)
+   在 System.Data.DataColumn.set_Item(Int32 record, Object value)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.DataColumn.set_Item(Int32 record, Object value)
+   在 System.Data.DataRow.set_Item(DataColumn column, Object value)
+   在 System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------header--------------------------
+2023-09-03 09:35:14,673 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:35:54,044 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:36:28,511 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:37:16,242 [5] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:41:00,906 [6] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:42:49,195 [5] ERROR EmployeeManageApi.Common.LoggerHelper - 未将对象引用设置到对象的实例。
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:44:00,858 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 未将对象引用设置到对象的实例。
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()
+
+----------------------header--------------------------
+2023-09-03 09:46:51,858 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:46:56,154 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:48:08,479 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------header--------------------------
+2023-09-03 09:57:18,944 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:57:22,677 [15] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 09:58:53,490 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 10:03:48,246 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 10:06:51,774 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport() 位置 E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\EmployeeManageApi\Controllers\ProductionPlanController.cs:行号 58
+
+----------------------footer--------------------------
+
+----------------------header--------------------------
+2023-09-03 10:09:49,282 [7] ERROR EmployeeManageApi.Common.LoggerHelper - 输入字符串的格式不正确。
+System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Single.Parse(String s)
+   在 EmployeeManageApi.Controllers.ProductionPlanController.ProductionImport()

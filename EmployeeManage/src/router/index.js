@@ -56,7 +56,8 @@ export const DynamicRoutes = [
 // 定义静态路由集合
 const staticRouterMap = [
 	'login',
-	'404'
+	'404',
+	'DATAVIS'
 ]
 
 const router = new VueRouter({

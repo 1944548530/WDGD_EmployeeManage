@@ -1,0 +1,7 @@
+E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\Email\bin\Debug\Email.exe.config
+E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\Email\bin\Debug\Email.exe
+E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\Email\bin\Debug\Email.pdb
+E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\Email\obj\Debug\Email.csproj.AssemblyReference.cache
+E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\Email\obj\Debug\Email.csproj.CoreCompileInputs.cache
+E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\Email\obj\Debug\Email.exe
+E:\GitHub\GitHubWDGD_EmployeeManage\EmployeeManageApi\Email\obj\Debug\Email.pdb

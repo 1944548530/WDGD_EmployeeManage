@@ -285,6 +285,7 @@
     <Compile Include="Models\MenuConfig.cs" />
     <Compile Include="Models\MenuList.cs" />
     <Compile Include="Models\Option.cs" />
+    <Compile Include="Models\ProductionPlan.cs" />
     <Compile Include="Models\QualityInfo.cs" />
     <Compile Include="Models\QualityQueryParam.cs" />
     <Compile Include="Models\QueryParam.cs" />

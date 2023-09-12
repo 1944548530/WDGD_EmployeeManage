@@ -3,6 +3,11 @@
     <header>
       <h1>数据可视化-ECharts</h1>
       <div class="showTime">{{ currentTime }}</div>
+      <div class="showMore">
+        <a href="http://localhost:81/" style="text-decoration:none;" target="_blank">打开更多看板→</a>
+        <!-- http://localhost:81/ -->
+        <!-- http://192.168.1.195/DATAVIS/ -->
+      </div>
     </header>
     <section class="mainbox">
       <div class="column">
@@ -179,7 +184,18 @@ export default {
     right: 0.375rem;
     top: 0;
     line-height: 0.9375rem;
-    color: rgba(255, 255, 255, 0.7);
+    color:white;
     font-size: 0.25rem;
+}
+.showMore{
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    line-height: 0.9375rem;
+    color:white;
+    font-size: 0.25rem;
+}
+a{
+  color:white;
 }
 </style>

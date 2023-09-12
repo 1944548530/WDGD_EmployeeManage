@@ -26,14 +26,14 @@
                             <!-- (page - 1) * this.pageSize +  -->
                         </template>
                     </el-table-column>
-                    <el-table-column label="Guid" align="center" width="170px" prop="Guid" v-if="false"></el-table-column>
-                    <el-table-column label="姓名" align="center" width="170px" prop="DisplayName" ></el-table-column>
-                    <el-table-column label="工号" align="center" width="170px" prop="EmployeeId" ></el-table-column>
-                    <el-table-column label="部门" align="center" width="170px" prop="Department" ></el-table-column>
-                    <el-table-column label="账号" align="center" width="170px" prop="LoginName" ></el-table-column>
-                    <el-table-column label="密码" align="center" width="180px" prop="Password" ></el-table-column>
+                    <el-table-column label="Guid" align="center" width="180px" prop="Guid" v-if="false"></el-table-column>
+                    <el-table-column label="姓名" align="center" width="180px" prop="DisplayName" ></el-table-column>
+                    <el-table-column label="工号" align="center" width="180px" prop="EmployeeId" ></el-table-column>
+                    <el-table-column label="部门" align="center" width="180px" prop="Department" ></el-table-column>
+                    <el-table-column label="账号" align="center" width="180px" prop="LoginName" ></el-table-column>
+                    <el-table-column label="密码" align="center" width="190px" prop="Password" ></el-table-column>
                     <el-table-column label="角色" align="center" width="180px" prop="UserType" :formatter="StatusFormat"></el-table-column>
-                    <el-table-column label="启用/禁用" align="center" width="170px" prop="Status" >
+                    <el-table-column label="启用/禁用" align="center" width="180px" prop="Status" >
                         <template slot-scope="scope">
                             <el-tag plain :type="scope.row.Status=='1'?'success':'warning'">
                                 {{scope.row.Status=='1'?'启用':'禁用'}}

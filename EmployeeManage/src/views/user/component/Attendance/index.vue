@@ -47,7 +47,7 @@
                     <el-table-column label="车间" align="center" width="120px" prop="department" ></el-table-column>
                     <el-table-column label="出勤状况" align="center" width="200px" prop="attendState" >
                         <template slot-scope="scope">
-                            <el-select size="mini"   v-model="scope.row.attendState" style="width:130px;height:40px !important;line-height:40px !important;" clearable
+                            <el-select   v-model="scope.row.attendState" style="width:130px;height:40px !important;line-height:40px !important;" clearable
                                 placeholder="请选择">
                                 <el-option v-for="item in attendStatusOp" :key="item.supplierId" :label="item.value" :value="item.label">
                                 </el-option>
@@ -69,7 +69,7 @@
                     </el-table-column>
                     <el-table-column label="借出车间" align="center" width="200px" prop="borrowDept" >
                         <template slot-scope="scope">
-                            <el-select size="mini"   v-model="scope.row.borrowDept" clearable
+                            <el-select  v-model="scope.row.borrowDept" clearable
                                 placeholder="请选择">
                                 <el-option v-for="item in departmentOption" :key="item.value" :label="item.label" :value="item.value">
                                 </el-option>
@@ -193,7 +193,7 @@
             width="80%"
             :close-on-click-modal="false"
         >
-            <el-row>
+            <el-row style="font-size:18px;">
                 <el-col :span="24">
                     车间:
                     <el-select v-model="overTimeParam.department" placeholder="请选择车间" clearable>
@@ -204,7 +204,7 @@
                                 :value="item.value"
                             >
                             </el-option>
-                    </el-select>&nbsp;
+                    </el-select>&emsp;
                     日期:
                     <el-date-picker 
                         style="width:180px;"
@@ -212,27 +212,46 @@
                         v-model="overTimeParam.date"
                         value-format="yyyy-MM-dd"
                         placeholder="日期"
-                    ></el-date-picker>&nbsp;
+                        @change="overDateChange"
+                    ></el-date-picker>&nbsp;～&nbsp;
+                    <el-date-picker 
+                        style="width:180px;"
+                        size="medium"
+                        v-model="overTimeParam.dateEnd"
+                        value-format="yyyy-MM-dd"
+                        placeholder="日期"
+                    ></el-date-picker>&emsp;
                     班别:&nbsp;
                     <el-radio v-model="overTimeParam.shift" label="D">白班</el-radio>
                     <el-radio v-model="overTimeParam.shift" label="N">晚班</el-radio>&emsp;
                     <el-button-group>
                         <el-button type="primary" @click="OverSearchBtn" size="medium" icon="el-icon-search">查询</el-button>
+                        <el-button type="primary" @click="OverExcelBtn" size="medium" icon="el-icon-search">导出</el-button>
                     </el-button-group>
                 </el-col>
             </el-row>
             
-            <el-table :data="overTimeInfoList" border stripe style="width:100%;margin-top:20px;margin-bottom:10px;" height="500" :header-cell-style="{background:'#f5f7fa'}">
-                <el-table-column type="index" fixed label="序号" prop="index" align="center" width="150px">
+            <el-table :data="overTimeInfoList" border stripe style="width:100%;margin-top:20px;margin-bottom:10px;" height="600" :header-cell-style="{background:'#f5f7fa'}">
+                <el-table-column type="index" fixed label="序号" prop="index" align="center" width="80px">
                     <template slot-scope="scope">
                         <span>{{ (overTimeParam.overTimePage - 1) * overTimeParam.overTimePageNum + scope.$index + 1}}</span>
                         <!-- (page - 1) * this.pageSize +  -->
                     </template>
                 </el-table-column>
-                <el-table-column label="姓名" align="center" width="130px" prop="cname" ></el-table-column>
-                <el-table-column label="工号" align="center" width="130px" prop="employeeId" ></el-table-column>
+                <el-table-column label="姓名" align="center" width="150px" prop="cname" ></el-table-column>
+                <el-table-column label="工号" align="center" width="150px" prop="employeeId" ></el-table-column>
                 <el-table-column label="车间" align="center" width="130px" prop="department" ></el-table-column>
-                <el-table-column label="加班结束时间" align="center" width="220px" prop="overTime" >
+                <el-table-column label="加班开始时间" align="center" width="180px" prop="overTime" >
+                    <template slot-scope="scope">
+                        <el-time-select
+                            v-model="scope.row.overStartTime"
+                            :picker-options="overTimeOption1"
+                            placeholder="选择时间"
+                            width="200px">
+                        </el-time-select>
+                    </template>
+                </el-table-column>
+                <el-table-column label="加班结束时间" align="center" width="180px" prop="overTime" >
                     <template slot-scope="scope">
                         <!-- <el-time-picker
                             is-range
@@ -246,21 +265,43 @@
                         </el-time-picker> -->
                         <el-time-select
                             v-model="scope.row.overTime"
-                            :picker-options="overTimeOption"
+                            :picker-options="overTimeOption2"
                             placeholder="选择时间"
-                            @change="overTimeChange(scope.row.overTime, scope.row)">
+                            width="200px"
+                            @change="overTimeChange(scope.row)">
                         </el-time-select>
                     </template>
                 </el-table-column>
-                <el-table-column label="加班时长(h)" align="center" width="120px" prop="overTimeCal" ></el-table-column>
+                <el-table-column label="加班时长(1.5倍)" align="center" width="120px" prop="overTimeCal" >
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.overTimeCal" width="110px"></el-input>
+                    </template>
+                </el-table-column>
+                <el-table-column label="加班时长(2倍)" align="center" width="120px" prop="overTimeCal2" >
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.overTimeCal2" width="110px"></el-input>
+                    </template>
+                </el-table-column>
+                <el-table-column label="加班时长(3倍)" align="center" width="120px" prop="overTimeCal3" >
+                    <template slot-scope="scope">
+                        <el-input v-model="scope.row.overTimeCal3" width="110px"></el-input>
+                    </template>
+                </el-table-column>
                 <el-table-column label="备注" align="center"  prop="overTips" width="200px">
                     <template slot-scope="scope">
                         <el-input v-model="scope.row.overTips" ></el-input>
                     </template>
                 </el-table-column>
-                <el-table-column label="维护人" align="center"  prop="overLmName" width="120px"></el-table-column>
-                <el-table-column label="维护人工号" align="center"  prop="overLmEmployeeId" width="130px"></el-table-column>
-                <el-table-column label="操作" align="center" width="100px"  fixed="right" >
+                <el-table-column label="维护人" align="center"  prop="overLmName" width="150px"></el-table-column>
+                <el-table-column label="维护人工号" align="center"  prop="overLmEmployeeId" width="150px"></el-table-column>
+                <el-table-column label="是否维护" align="center" width="100px" prop="lmstate" fixed="right">
+                        <template slot-scope="scope">
+                            <el-tag plain size="medium" :type="scope.row.overLmState=='Y'?'success':'warning'">
+                                {{scope.row.overLmState=='Y'?'已维护':'未维护'}}
+                            </el-tag>
+                        </template>
+                    </el-table-column>
+                <el-table-column label="操作" align="center"  fixed="right" >
                     <template slot-scope="scope">
                         <!-- 删除按钮 -->
                         <el-tooltip
@@ -320,6 +361,16 @@
                     step: '00:30',
                     end: '23:00'
                 },
+                overTimeOption1:{
+                    start: '00:00',
+                    step: '00:30',
+                    end: '23:00'
+                },
+                overTimeOption2:{
+                    start: '',
+                    step: '00:30',
+                    end: '24:00'
+                },
                 deptOp:[],
                 //loginDialogVisible: false,
                 loginForm:{
@@ -346,20 +397,26 @@
                     overTimePageNum: 25,
                     department: '',
                     date: '', 
-                    shift: 'D'
-                }
+                    shift: 'D',
+                    dateEnd: ''
+                },
+                workTimeInfo:[]
             }
         },
         created: function(){
             this.queryParam.date = getDateFormat(new Date())
             this.overTimeParam.date = getDateFormat(new Date())
+            this.overTimeParam.dateEnd = getDateFormat(new Date())
             this.GetInfoList()
-            
+            this.getWorkTimeInfo()
         },
         mounted(){
             this.getDeptOp()
         },
         methods:{
+            overDateChange(e){
+                
+            },
             SaveOverRow: function(row){
                 let param = {
                         date: this.overTimeParam.date,
@@ -367,7 +424,10 @@
                         cname: row.cname,
                         employeeId: row.employeeId,
                         overEndTime: row.overTime,
+                        overStartTime: row.overStartTime,
                         overTimeHour: row.overTimeCal,
+                        overTimeHour2: row.overTimeCal2,
+                        overTimeHour3: row.overTimeCal3,
                         overTips: row.overTips,
                         department: row.department
                     }
@@ -396,6 +456,26 @@
             delInfo: function(row){
 
             },
+            OverExcelBtn: function(){
+                this.$http.get('Attendance/ExportOvertimeInfo',{
+                    params: this.overTimeParam,
+                    responseType: 'blob',
+                    headers:{
+                        'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+                    }
+                }).then(res => {
+                    const resultData = res.data
+                    const fileName = "加班信息" + ".xlsx"
+                    downFile(resultData, fileName)
+                }).catch(err => {
+                    this.$message({
+                        showClose: true,
+                        message: '网络未连接',
+                        type: 'error',
+                        duration: 2000,
+                    })
+                })
+            },
             overTimeBtn: function(){
                 this.overTimeDialogShow = true
                 this.GetOverTimeList()
@@ -405,6 +485,12 @@
                     const result = res.data
                     this.departmentOption = result.Data
                     //this.queryParam.department = this.departmentOption[0].value
+                })
+            },
+            getWorkTimeInfo: function(){
+                this.$http.get('Attendance/GetWorkTimeInfo').then(res => {
+                    const data = res.data.Data.map(item => ({dept: item.department, endTime: item.overEndTime}))
+                    this.WorkTimeInfo = data
                 })
             },
             SaveRow: function(row){
@@ -427,9 +513,10 @@
                         employeeId: row.employeeId,
                         attendState: row.attendState,
                         attendStartTime: attendStartTime,
+                        
                         attendEndTime: attendEndTime,
                         borrowDept: row.borrowDept,
-                        //overStartTime: row.overStartTime,
+                        overStartTime: row.overStartTime,
                         overEndTime: row.overTime,
                         overTimeHour: row.overTimeCal,
                         tips: row.tips,
@@ -482,25 +569,45 @@
             //         })
             //     }
             // },
-            overTimeChange: function(ele, row){
-                if(ele == null){
-                    row.overTimeCal = ''
-                }else{
+            overTimeChange: function(row){
                     // let endTime = new Date(ele[1])
                     // let startHour = startTime.getHours()
                     // let endHour = endTime.getHours()
                     //console.log("加班时长:" + (endHour - startHour))
                     //row.overTimeCal = endHour - startHour
-                    const overTimeHH = parseInt(ele.split(':')[0])
-                    const overTimeMM = parseInt(ele.split(':')[1])
-                    if(this.queryParam.shift == 'D'){
-                            row.overTimeCal = overTimeMM / 60 + overTimeHH - (16 + 30 / 60)
+
+                    // const overTimeHH = parseInt(ele.split(':')[0])
+                    // const overTimeMM = parseInt(ele.split(':')[1])
+                    // if(this.queryParam.shift == 'D'){
+                    //         row.overTimeCal = overTimeMM / 60 + overTimeHH - (16 + 30 / 60)
+                    // }else{
+                    //     row.overTimeCal = Math.round(overTimeMM / 60) + overTimeHH - (5)
+                    // }
+                    const day = new Date(this.overTimeParam.date).getDay();
+                    const timeHH = parseInt(row.overTime.split(':')[0])
+                    const timeMM = parseInt(row.overTime.split(':')[1])
+                    if(!(day === 0 || day === 6)){
+                        const endTime = this.WorkTimeInfo.filter(item => item.dept == row.department)[0].endTime
+                        const endTimeHour = parseInt(endTime.split(':')[0])
+                        const endTimeMM = parseInt(endTime.split(':')[1])
+                        if(timeHH >= 20){
+                            row.overTimeCal = 3.5
+                            row.overTimeCal2 = timeMM / 60 + timeHH - 20
+                        }else{
+                            row.overTimeCal = (timeMM - endTimeMM) / 60 + timeHH - endTimeHour 
+                            row.overTimeCal2 = 0
+                        }
                     }else{
-                        row.overTimeCal = Math.round(overTimeMM / 60) + overTimeHH - (5)
+                        const timeWHH = parseInt(row.overStartTime.split(':')[0])
+                        const timeWMM = parseInt(row.overStartTime.split(':')[1])
+                        if(timeHH >= 20){
+                            row.overTimeCal2 = 12
+                            row.overTimeCal3 = timeMM / 60 + timeHH - 20
+                        }else{
+                            row.overTimeCal2 = (timeMM - timeWMM) / 60 + timeHH - timeWHH
+                            row.overTimeCal3 = 0
+                        }
                     }
-                    
-                    
-                }
                 
             },
             exportExcel: function(){
@@ -531,7 +638,12 @@
                     this.overTimeOption.start = '17:00'
                     this.overTimeOption.end = '23:00'
                 }
-                
+                const weekDay = new Date(this.overTimeParam.date).getDay()
+                if(weekDay === 0 || weekDay === 6 ){
+                    this.overTimeOption2.start = "00:00"
+                }else{
+                    this.overTimeOption2.start = "16:30"
+                }
                 this.$http.get('Attendance/GetOvertTimeInfo',{
                     params: this.overTimeParam
                 }).then(res => {
@@ -543,8 +655,11 @@
                             employeeId: item.employeeId,
                             department: item.department,
                             overTime: item.overTime,
+                            overStartTime: item.overStartTime,
                             overTimeCal: item.overTimeHour,
-                            lmstate: item.lmstate,
+                            overTimeCal2: item.overTimeHour2,
+                            overTimeCal3: item.overTimeHour3,
+                            overLmState: item.overLmState,
                             overLmName: item.overLmName,
                             overLmEmployeeId: item.overLmEmployeeId,
                             overTips: item.overTips
@@ -553,7 +668,7 @@
                     })
                     this.overTimeInfoList = rowsNew
                     this.overTimeTotal = result.total
-                    console.log(this.overTimeInfoList)
+                
                 })
             },
             GetInfoList: function(){
@@ -633,7 +748,7 @@
     }
 </script>
     
-<style type="text/css" >
+<style type="text/css" scoped>
     /* .tableDiv{
         width:100%;
         height:720px;
@@ -646,6 +761,9 @@
     .el-breadcrumb__inner{
         font-weight: bold !important;
         font-size:15px !important;
+    }
+    .el-date-editor--time-select{
+        width:165px !important;
     }
     .el-breadcrumb__item:last-child .el-breadcrumb__inner{
         font-weight: bold !important;
@@ -667,14 +785,14 @@
         height:37px !important;
         line-height:37px !important;
     }
-    .attendanceCss .el-input{
+    /* .attendanceCss .el-input{
         width:180px !important;
-    }
+    } */
     .el-date-editor .el-range-input{
         width: 19% !important;
     }
     .el-date-editor--daterange.el-input, .el-date-editor--daterange.el-input__inner, .el-date-editor--timerange.el-input, .el-date-editor--timerange.el-input__inner{
-        width:206px !important;
+        width:200px !important;
     } 
     .el-date-editor .el-range-input{
         width:50% !important;
@@ -696,8 +814,8 @@
         width:100px !important;
     }
     .attendanceCss .paginationCss  .el-input--mini .el-input__inner{
-        height: 28px !important;
-        line-height: 28px !important;
+        height: 35px !important;
+        line-height: 35px !important;
         width:100px !important;
     }
     .el-pagination{
@@ -706,5 +824,9 @@
     .paginationCss{
         margin-top:20px;
     }
-
+    .el-input--mini .el-input__inner{
+        height: 35px !important;
+        line-height: 35px !important;
+        width:100px !important;
+    }
 </style>

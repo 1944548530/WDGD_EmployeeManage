@@ -37,15 +37,15 @@
                             <!-- (page - 1) * this.pageSize +  -->
                         </template>
                     </el-table-column>
-                    <el-table-column label="姓名" align="center" width="150px" prop="cname" ></el-table-column>
-                    <el-table-column label="工号" align="center" width="150px" prop="employeeId" ></el-table-column>
-                    <el-table-column label="班别" align="center" width="150px" prop="shift" ></el-table-column>
-                    <el-table-column label="车间" align="center" width="150px" prop="department" ></el-table-column>
+                    <el-table-column label="姓名" align="center" width="160px" prop="cname" ></el-table-column>
+                    <el-table-column label="工号" align="center" width="160px" prop="employeeId" ></el-table-column>
+                    <el-table-column label="班别" align="center" width="160px" prop="shift" ></el-table-column>
+                    <el-table-column label="车间" align="center" width="160px" prop="department" ></el-table-column>
                     <el-table-column label="入职日期" align="center" width="180px" prop="indate" ></el-table-column>
-                    <el-table-column label="等级" align="center" width="150px" prop="grade" ></el-table-column>
+                    <el-table-column label="等级" align="center" width="160px" prop="grade" ></el-table-column>
                     <el-table-column label="上岗技能" align="center" width="220px" prop="postSkill" ></el-table-column>
-                    <el-table-column label="当前岗位" align="center" width="150px" prop="postNow" ></el-table-column>
-                    <el-table-column label="操作" align="center"  width="150px" header-align="center" fixed="right" >
+                    <el-table-column label="当前岗位" align="center" width="160px" prop="postNow" ></el-table-column>
+                    <el-table-column label="操作" align="center" header-align="center" fixed="right" >
                         <template slot-scope="scope">
                             <!-- 修改按钮 -->
                             <el-tooltip
@@ -350,26 +350,42 @@
             :visible.sync="deptDialogVisible"
             @close="deptDialogVisible=false"
             title="车间维护"
-            width="40%"
+            width="50%"
             class="abow_dialog"
             :close-on-click-modal="false"
         >
-            <el-form style="margin-left:20px;" label-width="10%" ref="formEditRef" v-model="deptForm" label-position="left">
+            <el-form  label-width="10%" ref="formEditRef" v-model="deptForm" label-position="left">
                 <el-form-item label="车间" prop="modelUp">
-                    <el-input v-model="deptForm.dept" placeholder="请输入内容" ></el-input>
-                    &emsp;&emsp;
-                    <el-button @click="deptInfoSave" size="medium" type="primary" style="margin-left:80px;">保存</el-button>
+                    <el-input v-model="deptForm.dept" placeholder="请输入车间" ></el-input>
                 </el-form-item>
+                <el-form-item label="上班时间" prop="workTime">
+                    <el-time-select
+                        v-model="deptForm.startTime"
+                        :picker-options="overTimeOption"
+                        placeholder="选择时间">
+                    </el-time-select>～
+                    <el-time-select
+                            v-model="deptForm.endTime"
+                            :picker-options="overTimeOption"
+                            placeholder="选择时间">
+                        </el-time-select>
+                </el-form-item>
+                <el-form-item style="text-align:center;">
+                    <el-button @click="deptInfoSave" size="medium" type="primary" >保存</el-button>
+                </el-form-item>
+                
             </el-form>
 
-            <el-table :data="deptInfoList" border stripe style="width:555px;margin-left:2%;margin-top:20px;margin-bottom:10px;" :header-cell-style="{background:'#f5f7fa'}">
+            <el-table :data="deptInfoList" border stripe style="width:100%;margin-top:20px;margin-bottom:10px;" :header-cell-style="{background:'#f5f7fa'}">
                 <el-table-column type="index" fixed label="序号" prop="index" align="center" width="150px">
                     <template slot-scope="scope">
                         <span>{{ (deptPagination.deptPageNum - 1) * deptPagination.deptPagesize + scope.$index + 1}}</span>
                         <!-- (page - 1) * this.pageSize +  -->
                     </template>
                 </el-table-column>
-                <el-table-column label="车间" align="center" header-align="center"  width="250px" prop="dept"></el-table-column>
+                <el-table-column label="车间" align="center" header-align="center"  width="180px" prop="dept"></el-table-column>
+                <el-table-column label="上班时间" align="center" header-align="center"  width="180px" prop="startTime"></el-table-column>
+                <el-table-column label="下班时间" align="center" header-align="center"  width="180px" prop="endTime"></el-table-column>
                 <el-table-column label="操作" align="center" header-align="center" >
                     <template slot-scope="scope">
                         <el-tooltip
@@ -468,7 +484,9 @@
                     shift: ''
                 },
                 deptForm:{
-                    dept: ''
+                    dept: '',
+                    startTime: '08:00',
+                    endTime: '17:00'
                 },
                 shiftOption:[
                     {
@@ -490,6 +508,11 @@
                     {label: '3',value: '3'},
                     {label: '4',value: '4'},
                 ],
+                overTimeOption:{
+                    start: '06:00',
+                    step: '00:30',
+                    end: '23:00'
+                },
                 departmentOption:[]
             }
         },

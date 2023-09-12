@@ -1,51 +1,506 @@
 {
-  "id": "2912022",
-  "name": "S3kan'ban",
+  "id": "4208525",
+  "name": "EmployeeManage",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
     {
-      "icon_id": "21177296",
-      "name": "模板维护",
-      "font_class": "mobanweihu",
-      "unicode": "e6d6",
-      "unicode_decimal": 59094
+      "icon_id": "26841823",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "ea3f",
+      "unicode_decimal": 59967
     },
     {
-      "icon_id": "11653569",
-      "name": "图表",
-      "font_class": "tubiao",
-      "unicode": "e631",
-      "unicode_decimal": 58929
+      "icon_id": "26841824",
+      "name": "分析",
+      "font_class": "fenxi",
+      "unicode": "ea40",
+      "unicode_decimal": 59968
     },
     {
-      "icon_id": "18267956",
-      "name": "图表柱图",
-      "font_class": "tubiaozhutu",
-      "unicode": "e997",
-      "unicode_decimal": 59799
+      "icon_id": "26841825",
+      "name": "项目",
+      "font_class": "xiangmu",
+      "unicode": "ea41",
+      "unicode_decimal": 59969
     },
     {
-      "icon_id": "12740716",
-      "name": "数据维护",
-      "font_class": "shujuweihu",
-      "unicode": "e607",
-      "unicode_decimal": 58887
+      "icon_id": "26841826",
+      "name": "会议",
+      "font_class": "huiyi",
+      "unicode": "ea42",
+      "unicode_decimal": 59970
     },
     {
-      "icon_id": "1969476",
-      "name": "日报统计",
-      "font_class": "ribaotongji",
-      "unicode": "e624",
-      "unicode_decimal": 58916
+      "icon_id": "26841827",
+      "name": "日报",
+      "font_class": "ribao",
+      "unicode": "ea43",
+      "unicode_decimal": 59971
     },
     {
-      "icon_id": "12331685",
-      "name": "维护",
-      "font_class": "weihu",
-      "unicode": "e66a",
-      "unicode_decimal": 58986
+      "icon_id": "26841828",
+      "name": "知识",
+      "font_class": "zhishi",
+      "unicode": "ea44",
+      "unicode_decimal": 59972
+    },
+    {
+      "icon_id": "26841829",
+      "name": "员工",
+      "font_class": "yuangong",
+      "unicode": "ea45",
+      "unicode_decimal": 59973
+    },
+    {
+      "icon_id": "26841830",
+      "name": "配置",
+      "font_class": "peizhi",
+      "unicode": "ea46",
+      "unicode_decimal": 59974
+    },
+    {
+      "icon_id": "26851692",
+      "name": "资讯收集配置",
+      "font_class": "zixunshoujipeizhi",
+      "unicode": "ea47",
+      "unicode_decimal": 59975
+    },
+    {
+      "icon_id": "26851693",
+      "name": "实习生管理",
+      "font_class": "shixishengguanli",
+      "unicode": "ea48",
+      "unicode_decimal": 59976
+    },
+    {
+      "icon_id": "26851694",
+      "name": "文档评分配置",
+      "font_class": "wendangpingfenpeizhi",
+      "unicode": "ea49",
+      "unicode_decimal": 59977
+    },
+    {
+      "icon_id": "26851695",
+      "name": "收入管理",
+      "font_class": "shouruguanli",
+      "unicode": "ea4a",
+      "unicode_decimal": 59978
+    },
+    {
+      "icon_id": "26851696",
+      "name": "项目分析",
+      "font_class": "xiangmufenxi",
+      "unicode": "ea4b",
+      "unicode_decimal": 59979
+    },
+    {
+      "icon_id": "26851697",
+      "name": "会议管理",
+      "font_class": "huiyiguanli",
+      "unicode": "ea4c",
+      "unicode_decimal": 59980
+    },
+    {
+      "icon_id": "26851698",
+      "name": "工作平台",
+      "font_class": "gongzuopingtai",
+      "unicode": "ea4d",
+      "unicode_decimal": 59981
+    },
+    {
+      "icon_id": "26851699",
+      "name": "日报管理",
+      "font_class": "ribaoguanli",
+      "unicode": "ea4e",
+      "unicode_decimal": 59982
+    },
+    {
+      "icon_id": "26851700",
+      "name": "系统管理",
+      "font_class": "xitongguanli",
+      "unicode": "ea4f",
+      "unicode_decimal": 59983
+    },
+    {
+      "icon_id": "26851701",
+      "name": "日志查询",
+      "font_class": "rizhichaxun",
+      "unicode": "ea50",
+      "unicode_decimal": 59984
+    },
+    {
+      "icon_id": "26851702",
+      "name": "项目核算配置",
+      "font_class": "xiangmuhesuanpeizhi",
+      "unicode": "ea51",
+      "unicode_decimal": 59985
+    },
+    {
+      "icon_id": "26851703",
+      "name": "员工管理",
+      "font_class": "yuangongguanli",
+      "unicode": "ea52",
+      "unicode_decimal": 59986
+    },
+    {
+      "icon_id": "26851704",
+      "name": "知识门户",
+      "font_class": "zhishimenhu",
+      "unicode": "ea53",
+      "unicode_decimal": 59987
+    },
+    {
+      "icon_id": "26851705",
+      "name": "文档管理",
+      "font_class": "wendangguanli",
+      "unicode": "ea54",
+      "unicode_decimal": 59988
+    },
+    {
+      "icon_id": "26851706",
+      "name": "项目成本",
+      "font_class": "xiangmuchengben",
+      "unicode": "ea55",
+      "unicode_decimal": 59989
+    },
+    {
+      "icon_id": "26851707",
+      "name": "文档权限配置",
+      "font_class": "wendangquanxianpeizhi",
+      "unicode": "ea56",
+      "unicode_decimal": 59990
+    },
+    {
+      "icon_id": "26851708",
+      "name": "项目管理",
+      "font_class": "xiangmuguanli",
+      "unicode": "ea57",
+      "unicode_decimal": 59991
+    },
+    {
+      "icon_id": "26851709",
+      "name": "项目成果",
+      "font_class": "xiangmuchengguo",
+      "unicode": "ea58",
+      "unicode_decimal": 59992
+    },
+    {
+      "icon_id": "26851710",
+      "name": "用户行为分析",
+      "font_class": "yonghuhangweifenxi",
+      "unicode": "ea59",
+      "unicode_decimal": 59993
+    },
+    {
+      "icon_id": "26876036",
+      "name": "工作必读",
+      "font_class": "gongzuobidu",
+      "unicode": "ea5a",
+      "unicode_decimal": 59994
+    },
+    {
+      "icon_id": "26876037",
+      "name": "会议密钥管理",
+      "font_class": "huiyimiyueguanli",
+      "unicode": "ea5b",
+      "unicode_decimal": 59995
+    },
+    {
+      "icon_id": "26876038",
+      "name": "成本参数",
+      "font_class": "chengbencanshu",
+      "unicode": "ea5c",
+      "unicode_decimal": 59996
+    },
+    {
+      "icon_id": "26876039",
+      "name": "岗位级别",
+      "font_class": "gangweijibie",
+      "unicode": "ea5d",
+      "unicode_decimal": 59997
+    },
+    {
+      "icon_id": "26876040",
+      "name": "待办",
+      "font_class": "daiban",
+      "unicode": "ea5e",
+      "unicode_decimal": 59998
+    },
+    {
+      "icon_id": "26876041",
+      "name": "爬取任务管理",
+      "font_class": "paqurenwuguanli",
+      "unicode": "ea5f",
+      "unicode_decimal": 59999
+    },
+    {
+      "icon_id": "26876042",
+      "name": "评分模型管理",
+      "font_class": "pingfenmoxingguanli",
+      "unicode": "ea60",
+      "unicode_decimal": 60000
+    },
+    {
+      "icon_id": "26876043",
+      "name": "成本核算",
+      "font_class": "chengbenhesuan",
+      "unicode": "ea61",
+      "unicode_decimal": 60001
+    },
+    {
+      "icon_id": "26876044",
+      "name": "角色管理",
+      "font_class": "jiaoseguanli",
+      "unicode": "ea62",
+      "unicode_decimal": 60002
+    },
+    {
+      "icon_id": "26876045",
+      "name": "分类管理",
+      "font_class": "fenleiguanli",
+      "unicode": "ea63",
+      "unicode_decimal": 60003
+    },
+    {
+      "icon_id": "26876046",
+      "name": "管理登录日志",
+      "font_class": "guanlidenglurizhi",
+      "unicode": "ea64",
+      "unicode_decimal": 60004
+    },
+    {
+      "icon_id": "26876047",
+      "name": "实习生入职",
+      "font_class": "shixishengruzhi",
+      "unicode": "ea65",
+      "unicode_decimal": 60005
+    },
+    {
+      "icon_id": "26876048",
+      "name": "部门管理",
+      "font_class": "bumenguanli",
+      "unicode": "ea66",
+      "unicode_decimal": 60006
+    },
+    {
+      "icon_id": "26876049",
+      "name": "可操作部门",
+      "font_class": "kecaozuobumen",
+      "unicode": "ea67",
+      "unicode_decimal": 60007
+    },
+    {
+      "icon_id": "26876050",
+      "name": "权限重置",
+      "font_class": "quanxianzhongzhi",
+      "unicode": "ea68",
+      "unicode_decimal": 60008
+    },
+    {
+      "icon_id": "26876051",
+      "name": "实习生招募",
+      "font_class": "shixishengzhaomu",
+      "unicode": "ea69",
+      "unicode_decimal": 60009
+    },
+    {
+      "icon_id": "26876052",
+      "name": "关键字管理",
+      "font_class": "guanjianziguanli",
+      "unicode": "ea6a",
+      "unicode_decimal": 60010
+    },
+    {
+      "icon_id": "26876053",
+      "name": "角色分配",
+      "font_class": "jiaosefenpei",
+      "unicode": "ea6b",
+      "unicode_decimal": 60011
+    },
+    {
+      "icon_id": "26876054",
+      "name": "首页",
+      "font_class": "shouye1",
+      "unicode": "ea6c",
+      "unicode_decimal": 60012
+    },
+    {
+      "icon_id": "26876055",
+      "name": "文档密级",
+      "font_class": "wendangmiji",
+      "unicode": "ea6d",
+      "unicode_decimal": 60013
+    },
+    {
+      "icon_id": "26876056",
+      "name": "人员工时",
+      "font_class": "renyuangongshi",
+      "unicode": "ea6e",
+      "unicode_decimal": 60014
+    },
+    {
+      "icon_id": "26876057",
+      "name": "评分项管理",
+      "font_class": "pingfenxiangguanli",
+      "unicode": "ea6f",
+      "unicode_decimal": 60015
+    },
+    {
+      "icon_id": "26876058",
+      "name": "项目核算",
+      "font_class": "xiangmuhesuan",
+      "unicode": "ea70",
+      "unicode_decimal": 60016
+    },
+    {
+      "icon_id": "26876059",
+      "name": "锁定与解锁",
+      "font_class": "suodingyujiesuo",
+      "unicode": "ea71",
+      "unicode_decimal": 60017
+    },
+    {
+      "icon_id": "26876060",
+      "name": "项目收入",
+      "font_class": "xiangmushouru",
+      "unicode": "ea72",
+      "unicode_decimal": 60018
+    },
+    {
+      "icon_id": "26876061",
+      "name": "日省行为分析",
+      "font_class": "rishenghangweifenxi",
+      "unicode": "ea73",
+      "unicode_decimal": 60019
+    },
+    {
+      "icon_id": "26876062",
+      "name": "已办",
+      "font_class": "yiban",
+      "unicode": "ea74",
+      "unicode_decimal": 60020
+    },
+    {
+      "icon_id": "26876063",
+      "name": "实习生日报",
+      "font_class": "shixishengribao",
+      "unicode": "ea75",
+      "unicode_decimal": 60021
+    },
+    {
+      "icon_id": "26876064",
+      "name": "项目创建",
+      "font_class": "xiangmuchuangjian",
+      "unicode": "ea76",
+      "unicode_decimal": 60022
+    },
+    {
+      "icon_id": "26876065",
+      "name": "知库行为分析",
+      "font_class": "zhikuhangweifenxi",
+      "unicode": "ea77",
+      "unicode_decimal": 60023
+    },
+    {
+      "icon_id": "26876066",
+      "name": "文件归档",
+      "font_class": "wenjianguidang",
+      "unicode": "ea78",
+      "unicode_decimal": 60024
+    },
+    {
+      "icon_id": "26876067",
+      "name": "研究文库",
+      "font_class": "yanjiuwenku",
+      "unicode": "ea79",
+      "unicode_decimal": 60025
+    },
+    {
+      "icon_id": "26876068",
+      "name": "管理操作日志",
+      "font_class": "guanlicaozuorizhi",
+      "unicode": "ea7a",
+      "unicode_decimal": 60026
+    },
+    {
+      "icon_id": "26876069",
+      "name": "实习生成本",
+      "font_class": "shixishengchengben",
+      "unicode": "ea7b",
+      "unicode_decimal": 60027
+    },
+    {
+      "icon_id": "26876070",
+      "name": "项目文档",
+      "font_class": "xiangmuwendang",
+      "unicode": "ea7c",
+      "unicode_decimal": 60028
+    },
+    {
+      "icon_id": "26876071",
+      "name": "收入参数",
+      "font_class": "shourucanshu",
+      "unicode": "ea7d",
+      "unicode_decimal": 60029
+    },
+    {
+      "icon_id": "26876072",
+      "name": "重置密码",
+      "font_class": "zhongzhimima",
+      "unicode": "ea7e",
+      "unicode_decimal": 60030
+    },
+    {
+      "icon_id": "26876073",
+      "name": "用户管理",
+      "font_class": "yonghuguanli",
+      "unicode": "ea7f",
+      "unicode_decimal": 60031
+    },
+    {
+      "icon_id": "26876074",
+      "name": "视频会议创建",
+      "font_class": "shipinhuiyichuangjian",
+      "unicode": "ea80",
+      "unicode_decimal": 60032
+    },
+    {
+      "icon_id": "26876075",
+      "name": "项目费用",
+      "font_class": "xiangmufeiyong",
+      "unicode": "ea81",
+      "unicode_decimal": 60033
+    },
+    {
+      "icon_id": "26876076",
+      "name": "文档管理",
+      "font_class": "wendangguanli1",
+      "unicode": "ea82",
+      "unicode_decimal": 60034
+    },
+    {
+      "icon_id": "26876077",
+      "name": "在线时长分析",
+      "font_class": "zaixianshichangfenxi",
+      "unicode": "ea83",
+      "unicode_decimal": 60035
+    },
+    {
+      "icon_id": "26876078",
+      "name": "员工日报",
+      "font_class": "yuangongribao",
+      "unicode": "ea84",
+      "unicode_decimal": 60036
+    },
+    {
+      "icon_id": "26876079",
+      "name": "薪资管理",
+      "font_class": "xinziguanli",
+      "unicode": "ea85",
+      "unicode_decimal": 60037
     }
   ]
 }

@@ -146,8 +146,8 @@
                                 placeholder="选择日期"
                             ></el-date-picker>
                         </td>
-                        <td colspan="3">
-                            <el-input v-model="addForm.eventDesc" placeholder="请输入内容" ></el-input>
+                        <td colspan="3" rowspan="4" >
+                            <el-input type="textarea" :rows="8" v-model="addForm.eventDesc" placeholder="请输入内容" ></el-input>
                         </td>
                         <td colspan="3" rowspan="4">
                             &emsp;<el-radio v-model="addForm.eventType"  label="违反公司纪律">违反公司纪律</el-radio><br><br>
@@ -158,7 +158,7 @@
                     </tr>
                     <tr class="blankTr">
                         <td rowspan="3" style="text-align:center;">一</td>
-                        <td rowspan="3" colspan="3" style="text-align:center;">一</td>
+                        
                     </tr>
                     <tr class="blankTr">
                     </tr>
@@ -248,7 +248,6 @@
                     eventDate: '',
                     eventDesc: '',
                     checkDate: '',
-                    checkName: '',
                     checkEmployeeId: '',
                     eventType:'',
                     OKNG: 'NG',
@@ -431,7 +430,7 @@
                 this.addForm.eventDate = getDateFormat(new Date())
                 this.addForm.eventDesc = ''
                 this.addForm.checkDate = getDateFormat(new Date())
-                this.addForm.checkName = ''
+                this.addForm.innerHTML = ''
                 this.addForm.checkEmployeeId = ''
                 this.addForm.eventType = ''
                 this.addForm.dealResult = ''
@@ -465,9 +464,13 @@
             },
             checkInput: function(){
                 var result = true
+                console.log("eventType:" + this.addForm.eventType)
+                console.log("OKNG:" + this.addForm.OKNG)
+                console.log("dealResult:" + this.addForm.dealResult)
+                console.log("checkName:" + this.$refs.checkName.innerHTML)
                 if(this.addForm.employeeId == "" || this.$refs.cname.innerHTML == "" || this.addForm.eventDesc == "" ||
                     this.addForm.eventType == "" || (this.addForm.OKNG == "NG" && this.addForm.dealResult == "") ||
-                    this.addForm.checkName == "" || this.addForm.checkEmployeeId == ""){
+                    this.$refs.checkName.innerHTML == "" || this.addForm.checkEmployeeId == ""){
                     result = false
                     this.$message({
                         showClose: true,
